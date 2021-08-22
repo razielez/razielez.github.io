@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SQL on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/sql/</link>
+    <description>Recent content in SQL on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 15 Oct 2019 23:15:47 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL练习题</title>
+      <link>https://razielez.github.io/posts/%E5%87%A0%E9%81%93sql%E7%BB%83%E4%B9%A0%E9%A2%98/</link>
+      <pubDate>Tue, 15 Oct 2019 23:15:47 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/%E5%87%A0%E9%81%93sql%E7%BB%83%E4%B9%A0%E9%A2%98/</guid>
+      <description>闲着没事情做几道SQL题。 Orcal SQL: 在线SQL测试
+MySQL指定进入某个端口命令
+mysql -uroot -p -P 3307 问题描述 1.学生表 Student(SID,Sname,Sage,Ssex) &amp;ndash;SID 学生编号,Sname 学生姓名,Sage 出生年月,Ssex 学生性别. 2.课程表 Course(CID,Cname,TID) &amp;ndash;CID &amp;ndash;课程编号,Cname 课程名称,TID 教师编号. 3.教师表 Teacher(TID,Tname) &amp;ndash;TID 教师编号,Tname 教师姓名. 4.成绩表 SC(SID,CID,score) &amp;ndash;SID 学生编号,CID 课程编号,score 分数. 建表语句:
+create table Student(SID varchar(10),Sname nvarchar(10),Sage datetime,Ssex nvarchar(10)); insert into Student values(&amp;#39;01&amp;#39; , &amp;#39;赵雷&amp;#39; , &amp;#39;1990-01-01&amp;#39; , &amp;#39;男&amp;#39;); insert into Student values(&amp;#39;02&amp;#39; , &amp;#39;钱电&amp;#39; , &amp;#39;1990-12-21&amp;#39; , &amp;#39;男&amp;#39;); insert into Student values(&amp;#39;03&amp;#39; , &amp;#39;孙风&amp;#39; , &amp;#39;1990-05-20&amp;#39; , &amp;#39;男&amp;#39;); insert into Student values(&amp;#39;04&amp;#39; , &amp;#39;李云&amp;#39; , &amp;#39;1990-08-06&amp;#39; , &amp;#39;男&amp;#39;); insert into Student values(&amp;#39;05&amp;#39; , &amp;#39;周梅&amp;#39; , &amp;#39;1991-12-01&amp;#39; , &amp;#39;女&amp;#39;); insert into Student values(&amp;#39;06&amp;#39; , &amp;#39;吴兰&amp;#39; , &amp;#39;1992-03-01&amp;#39; , &amp;#39;女&amp;#39;); insert into Student values(&amp;#39;07&amp;#39; , &amp;#39;郑竹&amp;#39; , &amp;#39;1989-07-01&amp;#39; , &amp;#39;女&amp;#39;); insert into Student values(&amp;#39;08&amp;#39; , &amp;#39;王菊&amp;#39; , &amp;#39;1990-01-20&amp;#39; , &amp;#39;女&amp;#39;); create table Course(CID varchar(10),Cname nvarchar(10),TID varchar(10)); insert into Course values(&amp;#39;01&amp;#39; , &amp;#39;语文&amp;#39; , &amp;#39;02&amp;#39;); insert into Course values(&amp;#39;02&amp;#39; , &amp;#39;数学&amp;#39; , &amp;#39;01&amp;#39;); insert into Course values(&amp;#39;03&amp;#39; , &amp;#39;英语&amp;#39; , &amp;#39;03&amp;#39;); create table Teacher(TID varchar(10),Tname nvarchar(10)); insert into Teacher values(&amp;#39;01&amp;#39; , &amp;#39;张三&amp;#39;); insert into Teacher values(&amp;#39;02&amp;#39; , &amp;#39;李四&amp;#39;); insert into Teacher values(&amp;#39;03&amp;#39; , &amp;#39;王五&amp;#39;); create table SC(SID varchar(10),CID varchar(10),score decimal(18,1)); insert into SC values(&amp;#39;01&amp;#39; , &amp;#39;01&amp;#39; , 80); insert into SC values(&amp;#39;01&amp;#39; , &amp;#39;02&amp;#39; , 90); insert into SC values(&amp;#39;01&amp;#39; , &amp;#39;03&amp;#39; , 99); insert into SC values(&amp;#39;02&amp;#39; , &amp;#39;01&amp;#39; , 70); insert into SC values(&amp;#39;02&amp;#39; , &amp;#39;02&amp;#39; , 60); insert into SC values(&amp;#39;02&amp;#39; , &amp;#39;03&amp;#39; , 80); insert into SC values(&amp;#39;03&amp;#39; , &amp;#39;01&amp;#39; , 80); insert into SC values(&amp;#39;03&amp;#39; , &amp;#39;02&amp;#39; , 80); insert into SC values(&amp;#39;03&amp;#39; , &amp;#39;03&amp;#39; , 80); insert into SC values(&amp;#39;04&amp;#39; , &amp;#39;01&amp;#39; , 50); insert into SC values(&amp;#39;04&amp;#39; , &amp;#39;02&amp;#39; , 30); insert into SC values(&amp;#39;04&amp;#39; , &amp;#39;03&amp;#39; , 20); insert into SC values(&amp;#39;05&amp;#39; , &amp;#39;01&amp;#39; , 76); insert into SC values(&amp;#39;05&amp;#39; , &amp;#39;02&amp;#39; , 87); insert into SC values(&amp;#39;06&amp;#39; , &amp;#39;01&amp;#39; , 31); insert into SC values(&amp;#39;06&amp;#39; , &amp;#39;03&amp;#39; , 34); insert into SC values(&amp;#39;07&amp;#39; , &amp;#39;02&amp;#39; , 89); insert into SC values(&amp;#39;07&amp;#39; , &amp;#39;03&amp;#39; , 98); 题目  查询&amp;quot;01&amp;quot;课程比&amp;quot;02&amp;quot;课程成绩高的学生的信息及课程分数   查询同时存在&amp;quot;01&amp;quot;课程和&amp;quot;02&amp;quot;课程的情况 结果:  +------+-------+---------------------+------+------------+------------+ | SID | Sname | Sage | Ssex | 01课程分数 | 02课程分数 | +------+-------+---------------------+------+------------+------------+ | 02 | 钱电 | 1990-12-21 00:00:00 | 男 | 70.</description>
+    </item>
+    
+  </channel>
+</rss>

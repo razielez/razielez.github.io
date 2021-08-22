@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>note on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/note/</link>
+    <description>Recent content in note on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Oct 2019 18:16:21 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>对IDEA调优</title>
+      <link>https://razielez.github.io/posts/%E4%B8%80%E6%AC%A1%E5%AF%B9idea%E7%9A%84%E8%B0%83%E4%BC%98/</link>
+      <pubDate>Fri, 25 Oct 2019 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/%E4%B8%80%E6%AC%A1%E5%AF%B9idea%E7%9A%84%E8%B0%83%E4%BC%98/</guid>
+      <description>工具  jps jstat -gcutil 9448 1000 jconsole.exe  IDEA调优后的参数 -server -Xms3g -Xmx3g -XX:NewRatio=5 -Xss16m -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:ConcGCThreads=4 -XX:ReservedCodeCacheSize=512m -XX:+TieredCompilation -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false-Djava.net.preferIPv4Stack=true-XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow 相关参数介绍 # custom IntelliJ IDEA VM options ##################JVM模式############################ # IDEA的JVM以Server模式启动（新生代默认使用ParNew） -server ##################内存分配############################ # 堆初始值占用3G，意味着IDEA启动即分配3G内存 -Xms3g # 堆最大值占用3G -Xmx3g # 强制JVM在启动时申请到足够的堆内存（否则IDEA启动时堆初始大小不足3g） -XX:+AlwaysPreTouch # 年轻代与老年代比例为1:3（默认值是1:4），降低年轻代的回收频率 -XX:NewRatio=3 # 栈帧大小为16m -Xss16m ##################老年代回收器############################ # 使用CMS老年代回收器 -XX:+UseConcMarkSweepGC # CMS的重新标记步骤：多线程一起执行 -XX:+CMSParallelRemarkEnabled # CMS的并发标记步骤：启用4个线程并发标记（理论上越多越好，前提是CPU核心足够多） -XX:ConcGCThreads=4 ##################JIT编译器############################ # 代码缓存，用于存放Just In Time编译后的本地代码，如果塞满，JVM将只解释执行，不再编译native代码。 -XX:ReservedCodeCacheSize=512m # 分层编译，JIT编译优化越来越好，IDEA运行时间越久越快 -XX:+TieredCompilation # 节省64位指针占用的空间，代价是JVM额外开销 -XX:+UseCompressedOops # 增大软引用在JVM中的存活时长（堆空闲空间越大越久） -XX:SoftRefLRUPolicyMSPerMB=50 -Dsun.</description>
+    </item>
+    
+    <item>
+      <title>Java8 Stream</title>
+      <link>https://razielez.github.io/posts/java8-stream/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/java8-stream/</guid>
+      <description>代码示例： public class Java8Stream { public static void main(String args[]) { System.out.println(&amp;#34;使用 Java 7: &amp;#34;); // 计算空字符串  List&amp;lt;String&amp;gt; strings = Arrays.asList(&amp;#34;abc&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;bc&amp;#34;, &amp;#34;efg&amp;#34;, &amp;#34;abcd&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;jkl&amp;#34;); System.out.println(&amp;#34;列表: &amp;#34; + strings); long count = getCountEmptyStringUsingJava7(strings); System.out.println(&amp;#34;空字符数量为: &amp;#34; + count); count = getCountLength3UsingJava7(strings); System.out.println(&amp;#34;字符串长度为 3 的数量为: &amp;#34; + count); // 删除空字符串  List&amp;lt;String&amp;gt; filtered = deleteEmptyStringsUsingJava7(strings); System.out.println(&amp;#34;筛选后的列表: &amp;#34; + filtered); // 删除空字符串，并使用逗号把它们合并起来  String mergedString = getMergedStringUsingJava7(strings, &amp;#34;, &amp;#34;); System.out.println(&amp;#34;合并字符串: &amp;#34; + mergedString); List&amp;lt;Integer&amp;gt; numbers = Arrays.</description>
+    </item>
+    
+    <item>
+      <title>Java8 Date AND Time API</title>
+      <link>https://razielez.github.io/posts/java8-date-time-api/</link>
+      <pubDate>Fri, 05 Oct 2018 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/java8-date-time-api/</guid>
+      <description>Java8 引入了新的时间类 使用 LocalDate 和 LocalTime 创建 LocalDate 对象并读取值
+//2013-03-06 LocalDate date = LocalDate.of(2012,03,06); //2012 int year = date.getYear(); //MARCH Month month = date.getMonth(); //TUESDAY DayOfWeek dow = date.getDayOfWeek(); //6 int day = date.getDayOfMonth(); //31 int len = date.lengthOfMonth(); //false boolean leap = date.isLeapYear(); //使用工厂方法获取系统日期 LocalDate today = LocalDate.now(); LocalTime time = LocalTime.now().withNano(0);//去除毫秒 TemporalField 是一个接口, 定义了如何访问 temporal 对象某个字段的值. ChronoField 枚举实现这一接口.
+int year = date.get(ChronoField.YEAR); int month = date.get(ChronoField.MONTH_OF_YEAR); int day = date.</description>
+    </item>
+    
+  </channel>
+</rss>

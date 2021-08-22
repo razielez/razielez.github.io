@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tools on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/tools/</link>
+    <description>Recent content in tools on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Oct 2017 10:22:46 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>conda常用操作(windows)</title>
+      <link>https://razielez.github.io/posts/conda%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Sat, 28 Oct 2017 10:22:46 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/conda%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/</guid>
+      <description>管理conda 验证安装 $ conda --version命令参阅可以用: conda &amp;ndash;help
+将conda更新到最新 $ conda update conda#有最新选择yesProceed ([y]/n)? y管理环境 创建环境 $ conda create --name snowflakes biopython#也可以指定python版本并安装Astroid和Babel$ conda create --name snowflakes python3.5 astroid babel使用biopython创建一个snowflakes的环境
+ 不指定目录即为默认目录/envs  使用环境 $ activate newen#切换回根目录$ deactivate显示安装过的环境 $ conda info --envs括号显示为当前环境 切换到另一个环境 $ activate another_environment克隆删除环境 #克隆$ conda create --name flowers --clone snowflakes#删除$ conda remove --name flowers --all管理Python 检查可安装的python版本 $ conda search --full-name python#列出包含python的所有包$ conda search python安装python3环境并不覆盖python2 $ conda create --name snackes pyhton=3包管理 看安装的包和版本列表 $ conda list查找、安装、删除 $ conda search beautifulsoup4$ conda install --name snowflakes beautifulsoup4 #未指定位置安装在当前位置$ conda remove --name snowflakes beautifulsoup4从Anaconda.</description>
+    </item>
+    
+    <item>
+      <title>通向外网的梯子</title>
+      <link>https://razielez.github.io/posts/%E9%80%9A%E5%90%91%E5%A4%96%E7%BD%91%E7%9A%84%E6%A2%AF%E5%AD%90/</link>
+      <pubDate>Sun, 22 Oct 2017 21:15:07 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/%E9%80%9A%E5%90%91%E5%A4%96%E7%BD%91%E7%9A%84%E6%A2%AF%E5%AD%90/</guid>
+      <description> 机场最为方便 v2ray适合自建 &amp;hellip;  </description>
+    </item>
+    
+    <item>
+      <title>Jupyter NoteBook常用快捷键</title>
+      <link>https://razielez.github.io/posts/jupyter-notebook%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Sat, 21 Oct 2017 15:39:41 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/jupyter-notebook%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>Jupyter Notebook 有两种键盘输入模式，命令模式和编辑模式。与Vim类似。
+命令模式按Esc进入，编辑模式按Enter进入
+命令模式快捷键    快捷键 作用     Shift+Enter 运行本单元，选中下一个单元   Ctrl+Enter 运行本单元   Alt+Enter 运行本单元在下插入新单元   Y 单元转入代码状态   M 单元转入markdown状态   R 单元转入raw状态   Up&amp;amp;K/Down&amp;amp;J 选中上方/下方单元   Shift+K/J 连续选择上方/下方单元   A/B 在上方/下方插入新单元   x/C 剪切/复制选中单元   Shift+V/V 粘贴到上方/下方单元   Z 恢复删除的最后一个单元   DD 删除选中的单元   Shift+M 合并选中的单元   Ctrl+S/S 保存当前文件   L 开关行号   O 转换输出   Shift+O 转换输出滚动   Esc/Q 关闭页面   H 显示快捷帮助   II/00 中断/重启NOteBook内核   Shift+Space/Space 向上/下滚动    编辑模式快捷键    快捷键 作用     Tab 代码补全或者缩进   Shift+Tab 提示   Ctrl+] 向右缩进   Ctrl+[ 向左缩进   Ctrl+Shift+Z/Ctrl+Y 重做   Ctrl+up/down 跳到单元开头/末尾   Ctrl+Left/Right 跳到左边/右边一个字首   Ctrl+BackSpace/Delete 删除前面一个字   Shift+Enter 运行本单元，选中下一个单元   Ctrl+M 切换到命令模式   Ctrl+Enter 运行本单元   Alt+Enter 运行本单元在下插入新单元   Ctrl+/ 注释整行或者取消注释    </description>
+    </item>
+    
+    <item>
+      <title>Windows上好用的软件</title>
+      <link>https://razielez.github.io/posts/windows%E4%B8%8A%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6/</link>
+      <pubDate>Sat, 14 Oct 2017 23:15:47 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/windows%E4%B8%8A%E5%A5%BD%E7%94%A8%E7%9A%84%E8%BD%AF%E4%BB%B6/</guid>
+      <description>Wox **Wox：**是开源免费强大的快捷启动器辅助工具，快速高效率打开软件,搜索文件 打开输入框：alt + space
+ 同类软件也有: ** Listary** , **Rolan**  包管理工具 **Chocolatey：**如果你认为没有包管理的操作系统是反人类的就用这个吧，Chocolatey 这套包管理系统目前已经包含了近 500 多款常用软件，常用的有Sublime text,git,Google Chrome······
+命令行工具 MobaXterm, 功能强大 cmder： 不多说，windows命令行神器，支持tab补全，支持了大部分的Linux命令······
+文本编辑器 Sublime text3：基于 Python 语言的外挂 API,跨平台（Windows、Linux 和 Mac OS X）,兼容 TextMate 的语言标记语法。关于软件的配置方面见：这里 sublime text 3 3143 license
+—– BEGIN LICENSE —–TwitterInc200 User LicenseEA7E-8900071D77F72E 390CDD93 4DCBA022 FAF6079061AA12C0 A37081C5 D0316412 4584D13694D7F7D4 95BC8C1C 527DA828 560BB037D1EDDD8C AE7B379F 50C9D69D B35179EF2FE898C4 8E4277A8 555CE714 E1FB0E43D5D52613 C3D12E98 BC49967F 7652EED29D2D2E61 67610860 6D338B72 5CF95C69E36B85CC 84991F19 7575D828 470A92AB—— END LICENSE —— 同类也有：  **VS Code：**毕竟宇宙级的 **Atom：**Atom是由GitHub开发的自由及开放源代码的文字与代码编辑器，支持OS X、Windows和Linux操作系统，支持Node.</description>
+    </item>
+    
+  </channel>
+</rss>

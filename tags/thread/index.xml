@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Thread on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/thread/</link>
+    <description>Recent content in Thread on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/thread/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java两个线程之间共享数据</title>
+      <link>https://razielez.github.io/posts/java%E4%B8%A4%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/java%E4%B8%A4%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE/</guid>
+      <description>Java里面进行多线程通信的主要方式就是共享内存的方式，共享内存主要的关注点有两个：可见性和有序性原子性。
+Java 内存模型（JMM）解决了可见性和有序性的问题，而锁解决了原子性的问题，理想情况下我们希望做到“同步”和“互斥”。
+有以下常规实现方法：
+一、数据抽象成一个类，对数据操作的方法封装在类里
+public class MyData1 { private int j = 0; public static void main(String[] args) { MyData1 data = new MyData1(); AddRunnable addRunnable = new AddRunnable(data); DecRunnable decRunnable = new DecRunnable(data); new Thread(addRunnable).start(); new Thread(decRunnable).start(); } public synchronized void add() { j++; System.out.println(&amp;#34;线程：&amp;#34; + Thread.currentThread().getName() + &amp;#34; j为：&amp;#34; + j); } public synchronized void dec() { j--; System.out.println(&amp;#34;线程：&amp;#34; + Thread.currentThread().getName() + &amp;#34; j为：&amp;#34; + j); } public int getData() { return j; } } class AddRunnable implements Runnable { MyData1 data1 = new MyData1(); public AddRunnable(MyData1 data1) { this.</description>
+    </item>
+    
+  </channel>
+</rss>

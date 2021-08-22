@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JSP on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/jsp/</link>
+    <description>Recent content in JSP on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Oct 2018 18:16:21 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/jsp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSP 九大内置对象常用方法</title>
+      <link>https://razielez.github.io/posts/jsp-%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 01 Oct 2018 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/jsp-%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>1. request 对象常用方法 request 是来自客户端的请求. 客户端的请求信息封装在 request 对象中. 以下 HttpServletRequest 类的实例.
+   方法 ( 类型 + 方法名 ) 描述     String getParameter(String strTextName) 获取表单提交信息   Enumeration getParameterNames() 返回可用参数的枚举   String[] getParameterValues(String name) 返回包含参数 name 的所有的数组   Enumeration getAttributeNames() 返回所有属性名的属性值   Object getAttribute(String name) 返回指定属性的属性值   String getCharacterEncoding() 返回字节编码方式   String getProtocol() 获取用户使用的协议   String getServletPath() 获取用户提交信息的页面   String getMethod() 获取客户提交信息的方式   BufferReader getHeader() 获取 HTTP 头文件的 accept、accept-encoding 和 Host 的值   String getRemoteAddr() 获取客户的 IP 地址   String getRemoteHost() 获取客户机的名称   String getserverName() 获取服务器的名称   int getServerPort() 获取服务器端口号    2.</description>
+    </item>
+    
+  </channel>
+</rss>

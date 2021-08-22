@@ -1,0 +1,137 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Razielez's Blog</title><meta name=description content="Record programming learning, bug fixes and some technical documents."><meta name=author content><link rel=canonical href=https://razielez.github.io/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.min.fef89dbd8fd8ffe465fea8fb5995a422e1060f64e336bb02afa6c128bd5f0c32.css integrity="sha256-/vidvY/Y/+Rl/qj7WZWkIuEGD2TjNrsCr6bBKL1fDDI=" rel="preload stylesheet" as=style><link rel=icon href=https://razielez.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://razielez.github.io/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://razielez.github.io/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://razielez.github.io/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://razielez.github.io/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.82.0"><link rel=alternate type=application/rss+xml href=https://razielez.github.io/index.xml><link rel=alternate type=application/json href=https://razielez.github.io/index.json><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="Razielez's Blog"><meta property="og:description" content="Record programming learning, bug fixes and some technical documents."><meta property="og:type" content="website"><meta property="og:url" content="https://razielez.github.io/"><meta property="og:image" content="https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="og:site_name" content="Razielez's Blog"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="Razielez's Blog"><meta name=twitter:description content="Record programming learning, bug fixes and some technical documents."><script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"Razielez's Blog","url":"https://razielez.github.io","description":"Record programming learning, bug fixes and some technical documents.","thumbnailUrl":"https://razielez.github.io/%3Clink%20/%20abs%20url%3E","sameAs":["https://stackoverflow.com/users/8806436/razielez","https://github.com/razielez","index.html"]}</script></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://razielez.github.io accesskey=h title="Razielez's Blog (Alt + H)">Razielez's Blog</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://razielez.github.io/archives/ title=Archives><span>Archives</span></a></li><li><a href=https://razielez.github.io/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://razielez.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://razielez.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-entry><header class=entry-header><h2>c++ std::ios_base::sync_with_stdio 加速输入输出</h2></header><section class=entry-content><p>static bool sync_with_stdio( bool sync = true ); 设置标准 C++ 流是否与标准 C 流在每次输入/输出操作后同步。
+遇到cin TLE时可以用于取消cin同步, 取消之后不能和 scanf，sscanf, getchar, fgets 之类同用。
+测试 #include &lt;iostream>#include &lt;cstdio> int main() { std::ios::sync_with_stdio(false); std::cout &lt;&lt; "a\n"; std::printf("b\n"); std::cout &lt;&lt; "c\n"; } 输出 （环境 g++5.4.0） b c a 默认的情况下cin绑定的是cout，每次执行 « 操作符的时候都要调用flush，这样会增加IO负担。
+std::ios::sync_with_stdio(false); std::cin.tie(0); 参考一 ： http://zh.cppreference.com/w/cpp/io/ios_base/sync_with_stdio
+参考二 ：http://www.hankcs.com/program/cpp/cin-tie-with-sync_with_stdio-acceleration-input-and-output.html</p></section><footer class=entry-footer>2018-05-14&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to c++ std::ios_base::sync_with_stdio 加速输入输出" href=https://razielez.github.io/posts/c-std-ios-base-sync-with-stdio-%E5%8A%A0%E9%80%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/></a></article><article class=post-entry><header class=entry-header><h2>Windows10 WIFI 热点问题</h2></header><section class=entry-content><p>win10玄学bug之一
+解决方案 ：
+命令行输入
+$ netsh wlan set hostednetwork mode=allow ssid=NAME key=PASSWORD $ netsh wlan start hostednetwork 然后在网络适配器的本地连接->属性->共享->设置共享刚才设置的WIFI热点</p></section><footer class=entry-footer>2018-05-08&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to Windows10 WIFI 热点问题" href=https://razielez.github.io/posts/window-wifi-%E7%83%AD%E7%82%B9%E9%97%AE%E9%A2%98/></a></article><article class=post-entry><header class=entry-header><h2>Python解决字符编码问题</h2></header><section class=entry-content><p>字符串分为unicode 和 str 两种类型
+文本字符和二进制数据分别用 str 和 byte表示
+#系统默认编码设置为utf-8 >>> import sys >>> sys.getdefultencoding 'utf-8' >>> str 与 bytes 之间的转换可以用 encode 和从decode
+>>> s = "Python测试" >>> s = s.encode() >>> print(s) b'Python\xe6\xb5\x8b\xe8\xaf\x95' >>> s = s.decode() >>> print(s) 'Python测试' base64 >>> import base64 >>> s = "asdasd" >>> s = base64.b64encode(s) >>> print(s) >>> s = base64.b64decode(s) >>> print(s) 参考 ： https://foofish.net/how-python3-handle-charset-encoding.html</p></section><footer class=entry-footer>2018-05-05&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to Python解决字符编码问题" href=https://razielez.github.io/posts/python%E8%A7%A3%E5%86%B3%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E9%97%AE%E9%A2%98/></a></article><article class=post-entry><header class=entry-header><h2>BFS</h2></header><section class=entry-content><p>入门 迷宫问题（最短路径） INPUT: 5 5
+SXXXX
+...XX
+.X...
+..XXX
+....G
+6 6
+......
+.S..X.
+XXX...
+....X.
+.X..XX
+.GX...
+OUPUT: 8
+10
+代码 #include &lt;iostream>#include &lt;queue>using namespace std; const int INF = 100000007; const int mx = 1007; typedef pair&lt;int, int> P; char maze[mx][mx];//地图 int n, m; int sx, sy;//开始坐标 int gx, gy;//结束坐标 int d[mx][mx];//到各个位置的最短距离数组 int dx[4] = {1,0,-1,0}, dy[4] = {0,1,0,-1};//移动向量 //（sx,sy)---->(gx,gy)最短路径 //无法到达就是 INF int bfs(){ queue&lt;P> que; //初始化所有位置为INF for(int i=0;i&lt;n;i++){ for(int j=0;j&lt;m;j++){ d[i][j]=INF; } } //放入起点 que....</p></section><footer class=entry-footer>2018-04-01&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to BFS" href=https://razielez.github.io/posts/bfs/></a></article><article class=post-entry><header class=entry-header><h2>并查集</h2></header><section class=entry-content><p>题目 : L2-010. 排座位 布置宴席最微妙的事情，就是给前来参宴的各位宾客安排座位。无论如何，总不能把两个死对头排到同一张宴会桌旁！这个艰巨任务现在就交给你，对任何一对客人，请编写程序告诉主人他们是否能被安排同席。
+输入格式： 输入第一行给出3个正整数：N（&lt;= 100），即前来参宴的宾客总人数，则这些人从1到N编号；M为已知两两宾客之间的关系数；K为查询的条数。随后M行，每行给出一对宾客之间的关系，格式为：“宾客1 宾客2 关系”，其中“关系”为1表示是朋友，-1表示是死对头。注意两个人不可能既是朋友又是敌人。最后K行，每行给出一对需要查询的宾客编号。
+这里假设朋友的朋友也是朋友。但敌人的敌人并不一定就是朋友，朋友的敌人也不一定是敌人。只有单纯直接的敌对关系才是绝对不能同席的。
+输出格式： 对每个查询输出一行结果：如果两位宾客之间是朋友，且没有敌对关系，则输出“No problem”；如果他们之间并不是朋友，但也不敌对，则输出“OK”；如果他们之间有敌对，然而也有共同的朋友，则输出“OK but…”；如果他们之间只有敌对关系，则输出“No way”。
+输入样例： 7 8 4
+5 6 1
+2 7 -1
+1 3 1
+3 4 1
+6 7 -1
+1 2 1
+1 4 1
+2 3 -1
+3 4
+5 7
+2 3
+7 2
+输出样例： No problem
+OK
+OK but...
+No way
+/* 11 8 6 1 2 1 3 2 4 5 6 5 7 6 8 7 9 10 11 4 6 3 9 5 9 11 6 7 8 3 4 */ #include &lt;iostream>using namespace std; int pre[100007];//节点 int enemy[1007][1007]; int find(int x) {//查找源头标号 int r = x; while (pre[r] !...</p></section><footer class=entry-footer>2018-04-01&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to 并查集" href=https://razielez.github.io/posts/%E5%B9%B6%E6%9F%A5%E9%9B%86/></a></article><article class=post-entry><header class=entry-header><h2>DFS</h2></header><section class=entry-content><p>入门 求连通块 INPUT : 1 1
+*
+3 5
+*@*@*
+**@**
+*@*@*
+1 8
+@@****@*
+5 5 ****@
+*@@*@
+*@**@
+@@@*@
+@@**@
+0 0
+OUTPUT : 0
+1
+2
+2
+代码 #include &lt;iostream>using namespace std; const int mx = 10007; int n, m; char field[mx][mx];//地图 void dfs(int x, int y){ field[x][y] = '*';//替换现在位置 //遍历8个方向 for(int dx=-1;dx&lt;=1;dx++){ for(int dy=-1;dy&lt;=1;dy++){ int nx=x+dx, ny=y+dy; if(0&lt;=nx&&nx&lt;n&&0&lt;=ny&&ny&lt;m&&field[nx][ny]=='@') dfs(nx,ny); } } return ; } void solve(){ int ans=0; for(int i=0;i&lt;n;i++){ for(int j=0;j&lt;m;j++){ //从@处开始遍历 if(field[i][j]=='@'){ dfs(i,j); ans++; } } } cout&lt;&lt;ans; } int main() { cin>>n>>m; for(int i=0;i&lt;n;i++){ scanf("%s",field[i]); } solve(); return 0; }</p></section><footer class=entry-footer>2018-04-01&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to DFS" href=https://razielez.github.io/posts/dfs/></a></article><article class=post-entry><header class=entry-header><h2>数论初步</h2></header><section class=entry-content><p>数论被“数学王子”高斯誉为整个数学王国的皇后
+欧几里得算法 最大公约数 欧几里得的辗转相除法计算的是两个自然数a和b的最大公约数g
+代码示例 //递归
+int gcd(int a, int b) {
+return b == 0 ? a : gcd(b, a % b);
+}
+//迭代
+int gcd(int a, int b) {
+while(b != 0) {
+int r = b;
+b = a % b;
+a = r;
+}
+return a;
+}
+唯一分解定理 扩展欧几里得算法 题目
+直线上的点。求直线ax+by+c=0上有多少整数点(x,y)满足x&lt;-[x1, x2], y &lt;- [y1, y2] 定理：若a和b为正整数，则存在整数x,y使得gcd(a,b)=ax+by
+代码示例 void gcd(int a, int b, int& d, int& x, int& y) { if (!...</p></section><footer class=entry-footer>2017-12-31&nbsp;·&nbsp;3 min</footer><a class=entry-link aria-label="post link to 数论初步" href=https://razielez.github.io/posts/%E6%95%B0%E8%AE%BA%E5%88%9D%E6%AD%A5/></a></article><article class=post-entry><header class=entry-header><h2>Git问题：Everything up-to-date解决</h2></header><section class=entry-content><p>push代码时遇到提示：Everything up-to-date,无法push代码 原因是git提交改动到缓存，要push的时候不会将本地所有的分支都push掉，所以出现这个问题。我们应该告诉git提交哪个分支。
+解决 在stackoverflow有解决方案
+创建分支 $ git branch newbranch
+#查看分支
+$ git branch
+切换分支 $ git checkout newbranch
+改动提交到新的分支 $ git add .
+$ git commit -a
+合并到master $ git merge newbranch
+#查看冲突
+$ git diff
+push代码 $ git push -u origin master
+删除分支 $ git branch -D newbranch
+删除合并部分大写D改为小写d</p></section><footer class=entry-footer>2017-11-04&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to Git问题：Everything up-to-date解决" href=https://razielez.github.io/posts/git%E9%97%AE%E9%A2%98everything-up-to-date%E8%A7%A3%E5%86%B3/></a></article><article class=post-entry><header class=entry-header><h2>快速幂</h2></header><section class=entry-content><p>快速幂 通常算法：
+int Pow(int A, int n)
+{
+if(n == 0) return 1;
+int rslt(1);
+for(int i(0); i &lt; n; ++i)
+rslt *= A;
+return rslt;
+}
+其复杂度是O(n)的。一般来说，这样的复杂度并不会使我们困惑，但是一般应用幂运算的地方，指数都会非常非常的大，比如1 000 000 000这个级别的，这时候我们会遇到两个问题，第一个就是我们不能再用int来存储整数，必须用高精度整数类型来进行存储，另一个就是在指数是如此变态的数量级之下，我们的计算量会骤然上升，结果也会异常惊人的大。简单来说就是二分法。 举个栗子： 一般解法： A^8 = A * A * A * A * A * A * A * A 总共需要7次乘法运算
+平均分解： A^8 = (A * A * A * A) * (A * A * A * A) = (A * A * A * A) ^ 2 这样我们就只需要4次乘法运算...</p></section><footer class=entry-footer>2017-10-31&nbsp;·&nbsp;2 min</footer><a class=entry-link aria-label="post link to 快速幂" href=https://razielez.github.io/posts/%E5%BF%AB%E9%80%9F%E5%B9%82/></a></article><article class=post-entry><header class=entry-header><h2>conda常用操作(windows)</h2></header><section class=entry-content><p>管理conda 验证安装 $ conda --version
+命令参阅可以用: conda –help
+将conda更新到最新 $ conda update conda
+#有最新选择yes
+Proceed ([y]/n)? y
+管理环境 创建环境 $ conda create --name snowflakes biopython
+#也可以指定python版本并安装Astroid和Babel
+$ conda create --name snowflakes python3.5 astroid babel
+使用biopython创建一个snowflakes的环境
+不指定目录即为默认目录/envs 使用环境 $ activate newen
+#切换回根目录
+$ deactivate
+显示安装过的环境 $ conda info --envs
+括号显示为当前环境 切换到另一个环境 $ activate another_environment
+克隆删除环境 #克隆
+$ conda create --name flowers --clone snowflakes
+#删除
+$ conda remove --name flowers --all
+管理Python 检查可安装的python版本 $ conda search --full-name python
+#列出包含python的所有包
+$ conda search python
+安装python3环境并不覆盖python2 $ conda create --name snackes pyhton=3
+包管理 看安装的包和版本列表 $ conda list
+查找、安装、删除 $ conda search beautifulsoup4
+$ conda install --name snowflakes beautifulsoup4 #未指定位置安装在当前位置
+$ conda remove --name snowflakes beautifulsoup4
+从Anaconda....</p></section><footer class=entry-footer>2017-10-28&nbsp;·&nbsp;1 min</footer><a class=entry-link aria-label="post link to conda常用操作(windows)" href=https://razielez.github.io/posts/conda%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://razielez.github.io/page/2/>« Prev Page</a>
+<a class=next href=https://razielez.github.io/page/4/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://razielez.github.io>Razielez's Blog</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

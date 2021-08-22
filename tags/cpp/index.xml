@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cpp on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/cpp/</link>
+    <description>Recent content in cpp on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lambda表达式</title>
+      <link>https://razielez.github.io/posts/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>lambda表达式是一行函数，是函数式编程的一种特性。
+python lambda &amp;lt;参数&amp;gt;: 表达式
+&amp;gt;&amp;gt;&amp;gt; f = lambda a,b: a + b &amp;gt;&amp;gt;&amp;gt; type(f) #&amp;lt;type &amp;#39;function&amp;#39;&amp;gt; 获取整除2的数字
+&amp;gt;&amp;gt;&amp;gt; list(filter(lambda x: x%2==0, range(10))) #[0, 2, 4, 6, 8] 列表并行排序
+&amp;gt;&amp;gt;&amp;gt; list1 = [1,2,3,2,3];list2 = [9,4,3,5,6] &amp;gt;&amp;gt;&amp;gt; data = zip(list1, list2) &amp;gt;&amp;gt;&amp;gt; data = sorted(data) &amp;gt;&amp;gt;&amp;gt; list1, list2 = map(lambda t: list(t), zip(*data)) cpp c++里的形式是这样的 [capture list] (parameter list) -&amp;gt;return type {function body}
+示例 #include &amp;lt;iostream&amp;gt;#include &amp;lt;string&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std; int main() { //call the func.</description>
+    </item>
+    
+  </channel>
+</rss>

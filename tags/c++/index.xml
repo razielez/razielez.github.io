@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>c&#43;&#43; on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 28 May 2018 10:39:53 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>c&#43;&#43;枚举next_premutation</title>
+      <link>https://razielez.github.io/posts/c&#43;&#43;%E6%9E%9A%E4%B8%BEnext_premutation/</link>
+      <pubDate>Mon, 28 May 2018 10:39:53 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/c&#43;&#43;%E6%9E%9A%E4%B8%BEnext_premutation/</guid>
+      <description>平均复杂度即为O(n)   next_permutation() 会改变区间[begin,end)内的元素次序，使它们符合“下一个排列次序”；
+  prev_permutation() 会改变区间[begin,end)内的元素次序，使它们符合“上一个排列次序”；
+  示例 #include &amp;lt;iostream&amp;gt;#include &amp;lt;algorithm&amp;gt;#include &amp;lt;vector&amp;gt;using namespace std; void f(vector&amp;lt;int&amp;gt; v){ for(int i=0;i&amp;lt;v.size();i++){ cout&amp;lt;&amp;lt;v[i]&amp;lt;&amp;lt;&amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; } int main() { vector&amp;lt;int&amp;gt; v; v.push_back(1); v.push_back(3); v.push_back(2); cout&amp;lt;&amp;lt;&amp;#34;原排列 ： &amp;#34;; f(v); for(int i=0;i&amp;lt;10;i++){ next_permutation(v.begin(),v.end());//升序序列 或者下一个排列次序 按照字典序生成下一个序列 	f(v); } //for(int i=0;i&amp;lt;5;i++){ 	//	prev_permutation(v.begin(),v.end());//降序 	//	f(v); 	//} 	return 0; } </description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43; std::ios_base::sync_with_stdio 加速输入输出</title>
+      <link>https://razielez.github.io/posts/c-std-ios-base-sync-with-stdio-%E5%8A%A0%E9%80%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</link>
+      <pubDate>Mon, 14 May 2018 14:57:41 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/c-std-ios-base-sync-with-stdio-%E5%8A%A0%E9%80%9F%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</guid>
+      <description>static bool sync_with_stdio( bool sync = true );  设置标准 C++ 流是否与标准 C 流在每次输入/输出操作后同步。
+遇到cin TLE时可以用于取消cin同步, 取消之后不能和 scanf，sscanf, getchar, fgets 之类同用。
+测试 #include &amp;lt;iostream&amp;gt;#include &amp;lt;cstdio&amp;gt; int main() { std::ios::sync_with_stdio(false); std::cout &amp;lt;&amp;lt; &amp;#34;a\n&amp;#34;; std::printf(&amp;#34;b\n&amp;#34;); std::cout &amp;lt;&amp;lt; &amp;#34;c\n&amp;#34;; } 输出 （环境 g++5.4.0） b c a 默认的情况下cin绑定的是cout，每次执行 &amp;laquo; 操作符的时候都要调用flush，这样会增加IO负担。
+std::ios::sync_with_stdio(false); std::cin.tie(0); 参考一 ： http://zh.cppreference.com/w/cpp/io/ios_base/sync_with_stdio
+参考二 ：http://www.hankcs.com/program/cpp/cin-tie-with-sync_with_stdio-acceleration-input-and-output.html</description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;的字符串与数字的转换</title>
+      <link>https://razielez.github.io/posts/c&#43;&#43;%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E7%9A%84%E8%BD%AC%E6%8D%A2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/c&#43;&#43;%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E7%9A%84%E8%BD%AC%E6%8D%A2/</guid>
+      <description>数字转字符串 #include &amp;lt;sstream&amp;gt;double a = 123.456; string s; stringstream ss; ss &amp;lt;&amp;lt; a; ss &amp;gt;&amp;gt; s; ss.clear(); #include &amp;lt;map&amp;gt;map&amp;lt;int, char&amp;gt; m; for (int i = 0; i &amp;lt; 10; i++) { m[i] = i + &amp;#39;0&amp;#39;; } #include &amp;lt;cstdio&amp;gt;char str[10]; double a = 123.456; sprintf(str, &amp;#34;%.3lf&amp;#34;, a); char str[10]; int a=175; sprintf(str,&amp;#34;%x&amp;#34;,a);//10进制转换成16进制，如果输出大写的字母是sprintf(str,&amp;#34;%X&amp;#34;,a) 字符串转数字 #include &amp;lt;sstream&amp;gt;string s = &amp;#34;123.456&amp;#34;; double a; stringstream ss; ss &amp;lt;&amp;lt; s; ss &amp;gt;&amp;gt; a; ss.clear(); #include &amp;lt;map&amp;gt;map&amp;lt;char, int&amp;gt; m; for (int i = 0; i &amp;lt; 10; i++) { m[i+&amp;#39;0&amp;#39;] = i; } #include &amp;lt;cstdio&amp;gt;char str[] = &amp;#34;123.</description>
+    </item>
+    
+    <item>
+      <title>scanf中的正则表达式</title>
+      <link>https://razielez.github.io/posts/scanf%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/posts/scanf%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+      <description>调用格式: scanf(&amp;quot;&amp;lt;格式化字符串&amp;gt;&amp;quot;, &amp;lt;地址表&amp;gt;); 一、为变量赋值时表示成功读取变量的个数, &amp;lt;格式化字符串&amp;gt;与&amp;lt;地址表&amp;gt;是严格匹配的
+scanf(&amp;#34;%c %c&amp;#34;, &amp;amp;a, &amp;amp;b); //函数返回值是2，并丢弃不想使用的空白符 scanf(&amp;#34;%d,%d&amp;#34;, &amp;amp;a, &amp;amp;b); //输入必须有逗号， 多个空格为一个空格 二、 %s 读取遇到空格停止读取，因此一般可以用fgets去读取字符串
+scanf(&amp;#34;%[a-z]&amp;#34;, &amp;amp;str); //遇到不再a-z字符停止读取 scanf(&amp;#34;666%[0-9]&amp;#34;, &amp;amp;str); //666开头并且在0-9字符读取，不是则停止 scanf(&amp;#34;%[^\n]&amp;#34;, &amp;amp;str); //^表示求反集，即这句话不是回车一直开始读取 三、压缩输入：在格式码前加上*，则用户就可以告诉scanf()读这个域，但不把它赋予任何变量。
+scanf(&amp;#34;%c%*c, &amp;amp;ch); 使用此方法可以在字符处理时吃掉多余的回车。 更多正则表达式语言参考
+sscanf、scanf的一些示例 </description>
+    </item>
+    
+  </channel>
+</rss>

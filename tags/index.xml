@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Razielez&#39;s Blog</title>
+    <link>https://razielez.github.io/tags/</link>
+    <description>Recent content in Tags on Razielez&#39;s Blog</description>
+    <image>
+      <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Oct 2019 18:16:21 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>java</title>
+      <link>https://razielez.github.io/tags/java/</link>
+      <pubDate>Fri, 25 Oct 2019 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>https://razielez.github.io/tags/note/</link>
+      <pubDate>Fri, 25 Oct 2019 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>https://razielez.github.io/tags/sql/</link>
+      <pubDate>Tue, 15 Oct 2019 23:15:47 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lock</title>
+      <link>https://razielez.github.io/tags/lock/</link>
+      <pubDate>Sat, 10 Aug 2019 10:39:53 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/lock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://razielez.github.io/tags/notes/</link>
+      <pubDate>Sat, 10 Aug 2019 10:39:53 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thread</title>
+      <link>https://razielez.github.io/tags/thread/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/thread/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interview</title>
+      <link>https://razielez.github.io/tags/interview/</link>
+      <pubDate>Mon, 01 Apr 2019 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>设计模式</title>
+      <link>https://razielez.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 01 Apr 2019 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://razielez.github.io/tags/algorithm/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>https://razielez.github.io/tags/sort/</link>
+      <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/sort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://razielez.github.io/tags/python/</link>
+      <pubDate>Tue, 01 Jan 2019 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>skill</title>
+      <link>https://razielez.github.io/tags/skill/</link>
+      <pubDate>Tue, 01 Jan 2019 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/skill/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>String</title>
+      <link>https://razielez.github.io/tags/string/</link>
+      <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/string/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://razielez.github.io/tags/git/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JSP</title>
+      <link>https://razielez.github.io/tags/jsp/</link>
+      <pubDate>Mon, 01 Oct 2018 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/jsp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://razielez.github.io/tags/linux/</link>
+      <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cpp</title>
+      <link>https://razielez.github.io/tags/cpp/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>https://razielez.github.io/tags/django/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>函数式编程</title>
+      <link>https://razielez.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>acm</title>
+      <link>https://razielez.github.io/tags/acm/</link>
+      <pubDate>Mon, 28 May 2018 10:39:53 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/acm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://razielez.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 28 May 2018 10:39:53 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://razielez.github.io/tags/ubuntu/</link>
+      <pubDate>Tue, 15 May 2018 17:45:02 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows10</title>
+      <link>https://razielez.github.io/tags/windows10/</link>
+      <pubDate>Tue, 08 May 2018 17:51:53 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/windows10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>图论</title>
+      <link>https://razielez.github.io/tags/%E5%9B%BE%E8%AE%BA/</link>
+      <pubDate>Sun, 01 Apr 2018 18:16:21 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/%E5%9B%BE%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数论</title>
+      <link>https://razielez.github.io/tags/%E6%95%B0%E8%AE%BA/</link>
+      <pubDate>Sun, 31 Dec 2017 18:57:58 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/%E6%95%B0%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://razielez.github.io/tags/tools/</link>
+      <pubDate>Sat, 28 Oct 2017 10:22:46 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gfw</title>
+      <link>https://razielez.github.io/tags/gfw/</link>
+      <pubDate>Sun, 22 Oct 2017 21:15:07 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/gfw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://razielez.github.io/tags/database/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://razielez.github.io/tags/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>字符串</title>
+      <link>https://razielez.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://razielez.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
