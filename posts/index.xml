@@ -9,7 +9,23 @@
       <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Aug 2021 00:04:05 +0800</lastBuildDate><atom:link href="https://razielez.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Oct 2021 12:49:26 +0800</lastBuildDate><atom:link href="https://razielez.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jdk编译记录</title>
+      <link>https://razielez.github.io/posts/jdk%E7%BC%96%E8%AF%91%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sun, 03 Oct 2021 12:49:26 +0800</pubDate>
+      
+      <guid>https://razielez.github.io/posts/jdk%E7%BC%96%E8%AF%91%E8%AE%B0%E5%BD%95/</guid>
+      <description>编译环境  操作系统： macOS Big Sur 11.4 20F71 x86_64 CPU架构： x86 BootStrap: zulu17.28.13-ca-jdk17.0.0-macosx_x64  编译版本： https://github.com/openjdk/jdk
+下载jdk源码 git clone https://git.openjdk.java.net/jdk/
+根据发布版本记录切换到 jdk17-ga版本
+git checkout jdk-17-ga 运行配置 构建之前彻底清空上一次编译结果
+make dist-clean 配置 BootStrap JDK。编译jdk17需要jdk17，下载已经编译好的jdk作为BootStrap JDK 同一个终端下配置JAVA_HOME
+export JAVA_HOME=${jdk17 home} 最后执行bash configure， 处理WARN等日志
+成功结果
+Configuration summary: * Name: macosx-x86_64-server-release * Debug level: release * HS debug level: product * JVM variants: server * JVM features: server: &#39;cds compiler1 compiler2 dtrace epsilongc g1gc jfr jni-check jvmci jvmti management nmt parallelgc serialgc services shenandoahgc vm-structs zgc&#39; * OpenJDK target: OS: macosx, CPU architecture: x86, address length: 64 * Version string: 17-internal+0-adhoc.</description>
+    </item>
+    
     <item>
       <title>博客的重新整理</title>
       <link>https://razielez.github.io/posts/%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%87%8D%E6%96%B0%E6%95%B4%E7%90%86/</link>

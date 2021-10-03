@@ -2,11 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://razielez.github.io/categories/</loc>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
+  </url><url>
+    <loc>https://razielez.github.io/tags/java/</loc>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
+  </url><url>
+    <loc>https://razielez.github.io/categories/java-study/</loc>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
+  </url><url>
+    <loc>https://razielez.github.io/tags/jdk/</loc>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
+  </url><url>
+    <loc>https://razielez.github.io/posts/jdk%E7%BC%96%E8%AF%91%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
+  </url><url>
     <loc>https://razielez.github.io/posts/</loc>
-    <lastmod>2021-08-23T00:04:05+08:00</lastmod>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
   </url><url>
     <loc>https://razielez.github.io/</loc>
-    <lastmod>2021-08-23T00:04:05+08:00</lastmod>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
+  </url><url>
+    <loc>https://razielez.github.io/tags/</loc>
+    <lastmod>2021-10-03T12:49:26+08:00</lastmod>
   </url><url>
     <loc>https://razielez.github.io/posts/%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%87%8D%E6%96%B0%E6%95%B4%E7%90%86/</loc>
     <lastmod>2021-08-23T00:04:05+08:00</lastmod>
@@ -14,13 +32,7 @@
     <loc>https://razielez.github.io/about/</loc>
     <lastmod>2021-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://razielez.github.io/tags/java/</loc>
-    <lastmod>2019-10-25T18:16:21+00:00</lastmod>
-  </url><url>
     <loc>https://razielez.github.io/tags/note/</loc>
-    <lastmod>2019-10-25T18:16:21+00:00</lastmod>
-  </url><url>
-    <loc>https://razielez.github.io/tags/</loc>
     <lastmod>2019-10-25T18:16:21+00:00</lastmod>
   </url><url>
     <loc>https://razielez.github.io/posts/%E4%B8%80%E6%AC%A1%E5%AF%B9idea%E7%9A%84%E8%B0%83%E4%BC%98/</loc>
@@ -203,8 +215,6 @@
     <loc>https://razielez.github.io/archives/</loc>
   </url><url>
     <loc>https://razielez.github.io/posts/c&#43;&#43;%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E%E6%95%B0%E5%AD%97%E7%9A%84%E8%BD%AC%E6%8D%A2/</loc>
-  </url><url>
-    <loc>https://razielez.github.io/categories/</loc>
   </url><url>
     <loc>https://razielez.github.io/tags/database/</loc>
   </url><url>
