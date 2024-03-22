@@ -28,15 +28,6 @@ export JAVA_HOME=${jdk17 home} 最后执行bash configure， 处理WARN等日志
 Configuration summary: * Name: macosx-x86_64-server-release * Debug level: release * HS debug level: product * JVM variants: server * JVM features: server: &amp;#39;cds compiler1 compiler2 dtrace epsilongc g1gc jfr jni-check jvmci jvmti management nmt parallelgc serialgc services shenandoahgc vm-structs zgc&amp;#39; * OpenJDK target: OS: macosx, CPU architecture: x86, address length: 64 * Version string: 17-internal+0-adhoc.</description>
     </item>
     <item>
-      <title>博客的重新整理</title>
-      <link>https://razielez.github.io/posts/%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%87%8D%E6%96%B0%E6%95%B4%E7%90%86/</link>
-      <pubDate>Mon, 23 Aug 2021 00:04:05 +0800</pubDate>
-      <guid>https://razielez.github.io/posts/%E5%8D%9A%E5%AE%A2%E7%9A%84%E9%87%8D%E6%96%B0%E6%95%B4%E7%90%86/</guid>
-      <description>博客的重新整理 之前用过wp、hexo体验都不是非常完美，记得毕业的时候还经常用hexo记录一些日常，使用mac后就没在重新搭建环境荒废掉了，也慢慢切向notion，现在主要还是喜欢用命令行直接写一些东西，打开一个笔记本软件也挺麻烦的，notion看起来也不是很有必要性，想一想还是需要记录一些日常开发和生活遇到的一些问题和想法，由此这便是这个博客重新整理的一些初衷。
-剩下的还有一些旧的数据的迁移和废弃
-废弃掉一些旧的数据 同步新的数据 数据同步最佳实践 坚持下来&amp;hellip; </description>
-    </item>
-    <item>
       <title>About</title>
       <link>https://razielez.github.io/about/</link>
       <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
