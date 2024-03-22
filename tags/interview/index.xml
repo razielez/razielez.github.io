@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>interview on Razielez&#39;s Blog</title>
+    <title>Interview on Razielez&#39;s Blog</title>
     <link>https://razielez.github.io/tags/interview/</link>
-    <description>Recent content in interview on Razielez&#39;s Blog</description>
+    <description>Recent content in Interview on Razielez&#39;s Blog</description>
     <image>
+      <title>Razielez&#39;s Blog</title>
       <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Apr 2019 18:16:21 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Apr 2019 18:16:21 +0000</lastBuildDate>
+    <atom:link href="https://razielez.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>设计模式复习</title>
       <link>https://razielez.github.io/posts/%E9%9D%A2%E8%AF%95-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Mon, 01 Apr 2019 18:16:21 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/%E9%9D%A2%E8%AF%95-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0/</guid>
       <description>设计模式复习 23种设计模式主要分为三类：创建型模式、结构型模式、行为型模式。
-创建型模式 单例模式  实现单例模式的思路是：一个类能返回对象一个引用(永远是同一个)和一个获得该实例的方法（必须是静态方法，通常使用getInstance这个名称）；当我们调用这个方法时，如果类持有的引用不为空就返回这个引用，如果类保持的引用为空就创建该类的实例并将实例的引用赋予该类保持的引用；同时我们还将该类的构造函数定义为私有方法，这样其他处的代码就无法通过调用该类的构造函数来实例化该类的对象，只有通过该类提供的静态方法来得到该类的唯一实例。
- 代码实现  饿汉式 线程安全  class Singleton { private static Singleton instance = new Singleton(); private Singleton() {} public static Singleton getInstance() { return instance; } } 懒汉式 双向检查锁定  class Singleton { // volatile 多线程安全, 但屏蔽Java虚拟机优化, 效率降低  private volatile static Singleton instance = null; private Singleton() {} public static Singleton getInstance() { if (instance == null) { // 锁定代码块  synchronized (Singleton.</description>
+创建型模式 单例模式 实现单例模式的思路是：一个类能返回对象一个引用(永远是同一个)和一个获得该实例的方法（必须是静态方法，通常使用getInstance这个名称）；当我们调用这个方法时，如果类持有的引用不为空就返回这个引用，如果类保持的引用为空就创建该类的实例并将实例的引用赋予该类保持的引用；同时我们还将该类的构造函数定义为私有方法，这样其他处的代码就无法通过调用该类的构造函数来实例化该类的对象，只有通过该类提供的静态方法来得到该类的唯一实例。
+代码实现 饿汉式 线程安全 class Singleton { private static Singleton instance = new Singleton(); private Singleton() {} public static Singleton getInstance() { return instance; } } 懒汉式 双向检查锁定 class Singleton { // volatile 多线程安全, 但屏蔽Java虚拟机优化, 效率降低 private volatile static Singleton instance = null; private Singleton() {} public static Singleton getInstance() { if (instance == null) { // 锁定代码块 synchronized (Singleton.class) { if (instance == null) { instance = new Singleton(); } } } return instance; } } 使用静态内部类实现 // IoDH 初始化不会失败使用, 延迟加载 public class Singleton { private static class SingletonHolder { private static final Singleton instance = new Singleton(); } public static Singleton getInstance(){ return SingletonHolder.</description>
     </item>
-    
   </channel>
 </rss>

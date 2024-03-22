@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>notes on Razielez&#39;s Blog</title>
+    <title>Notes on Razielez&#39;s Blog</title>
     <link>https://razielez.github.io/tags/notes/</link>
-    <description>Recent content in notes on Razielez&#39;s Blog</description>
+    <description>Recent content in Notes on Razielez&#39;s Blog</description>
     <image>
+      <title>Razielez&#39;s Blog</title>
       <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 10 Aug 2019 10:39:53 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Aug 2019 10:39:53 +0000</lastBuildDate>
+    <atom:link href="https://razielez.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Java线程检测死锁</title>
       <link>https://razielez.github.io/posts/java%E7%BA%BF%E7%A8%8B%E6%A3%80%E6%B5%8B%E6%AD%BB%E9%94%81/</link>
       <pubDate>Sat, 10 Aug 2019 10:39:53 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/java%E7%BA%BF%E7%A8%8B%E6%A3%80%E6%B5%8B%E6%AD%BB%E9%94%81/</guid>
       <description>死锁是指两个或两个以上的进程在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，若无外力作用，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的进程称为死锁进程。
 Java线程中我们构造两个相互等待对方释放资源的线程就构成了死锁。
 代码：
 public class DeadLockSimulation { private static String A = &amp;#34;a&amp;#34;; private static String B = &amp;#34;b&amp;#34;; public static void main(String[] args) { new DeadLockSimulation().deadLock(); } private void deadLock() { Thread t1 = new Thread(new Runnable() { @Override public void run() { synchronized (A) { try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); } synchronized (B) { System.out.println(&amp;#34;t1&amp;#34;); } } } }); Thread t2 = new Thread(new Runnable() { @Override public void run() { synchronized (B) { synchronized (A) { System.</description>
     </item>
-    
     <item>
       <title>Java基础复习（一）</title>
       <link>https://razielez.github.io/posts/java%E5%A4%8D%E4%B9%A0%E4%B8%80/</link>
       <pubDate>Wed, 01 May 2019 10:39:53 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/java%E5%A4%8D%E4%B9%A0%E4%B8%80/</guid>
       <description>Java基础 面向对象六原则一法则 单一职责原则（Single-Resposibility Principle） 一个类只做它该做的事情。（单一职责原则想表达的就是&amp;quot;高内聚&amp;quot;，写代码最终极的原则只有六个字&amp;quot;高内聚、低耦合&amp;quot;，所谓的高内聚就是一个代码模块只完成一项功能，在面向对象中，如果只让一个类完成它该做的事，而不涉及与它无关的领域就是践行了高内聚的原则，这个类就只有单一职责。另一个是模块化一个好的软件系统，它里面的每个功能模块也应该是可以轻易的拿到其他系统中使用的，这样才能实现软件复用的目标。）。
 开放封闭原则（Open-Closed principle） 软件实体应当对扩展开放，对修改关闭。（在理想的状态下，当我们需要为一个软件系统增加新功能时，只需要从原来的系统派生出一些新类就可以，不需要修改原来的任何一行代码。要做到开闭有两个要点：1. 抽象是关键，一个系统中如果没有抽象类或接口系统就没有扩展点；2. 封装可变性，将系统中的各种可变因素封装到一个继承结构中，如果多个可变因素混杂在一起，系统将变得复杂而换乱，如果不清楚如何封装可变性）
@@ -35,46 +35,40 @@ Liskov替换原则（Liskov-Substituion Principle） 里氏替换原则，任何
 接口隔离原则（Interface-Segregation Principle） 接口要小而专，绝不能大而全。（臃肿的接口是对接口的污染，既然接口表示能力，那么一个接口只应该描述一种能力，接口也应该是高度内聚的。例如，琴棋书画就应该分别设计为四个接口，而不应设计成一个接口中的四个方法，因为如果设计成一个接口中的四个方法，那么这个接口很难用，毕竟琴棋书画四样都精通的人还是少数，而如果设计成四个接口，会几项就实现几个接口，这样的话每个接口被复用的可能性是很高的。Java中的接口代表能力、 分离的手段主要有以下两种：1. 委托分离，通过增加一个新的类型来委托客户的请求，隔离客户和接口的直接依赖，但是会增加系统的开销。2. 多重继承分离，通过接口多继承来实现客户的需求，这种方式是较好的。
 合成聚合复用原则 优先使用聚合或合成关系复用代码。（通过继承来复用代码是面向对象程序设计中被滥用得最多的东西，因为所有的教科书都无一例外的对继承进行了鼓吹从而误导了初学者，类与类之间简单的说有三种关系，Is-A关系、Has-A关系、Use-A关系，分别代表继承、关联和依赖。其中，关联关系根据其关联的强度又可以进一步划分为关联、聚合和合成，但说白了都是Has-A关系，合成聚合复用原则想表达的是优先考虑Has-A关系而不是Is-A关系复用代码，原因嘛可以自己从百度上找到一万个理由，需要说明的是，即使在Java的API中也有不少滥用继承的例子，例如Properties类继承了Hashtable类，Stack类继承了Vector类，这些继承明显就是错误的，更好的做法是在Properties类中放置一个Hashtable类型的成员并且将其键和值都设置为字符串来存储数据，而Stack类的设计也应该是在Stack类中放一个Vector对象来存储数据。记住：任何时候都不要继承工具类，工具是可以拥有并可以使用的，而不是拿来继承的。）
 迪米特法则 迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解。再复杂的系统都可以为用户提供一个简单的门面，Java Web开发中作为前端控制器的Servlet或Filter不就是一个门面吗，浏览器对服务器的运作方式一无所知，但是通过前端控制器就能够根据你的请求得到相应的服务。调停者模式也可以举一个简单的例子来说明，例如一台计算机，CPU、内存、硬盘、显卡、声卡各种设备需要相互配合才能很好的工作，但是如果这些东西都直接连接到一起，计算机的布线将异常复杂，在这种情况下，主板作为一个调停者的身份出现，它将各个设备连接在一起而不需要每个设备之间直接交换数据，这样就减小了系统的耦合度和复杂度。
-Java如何实现的平台无关  Java语言规范  通过规定Java语言中基本数据类型的取值范围和行为   Class文件  所有Java文件要编译成统一的Class文件   Java虚拟机  通过Java虚拟机将Class文件转成对应平台的二进制文件等    JVM支持哪些语言（Kotlin、Groovy、JRuby、Jython、Scala）
+Java如何实现的平台无关 Java语言规范 通过规定Java语言中基本数据类型的取值范围和行为 Class文件 所有Java文件要编译成统一的Class文件 Java虚拟机 通过Java虚拟机将Class文件转成对应平台的二进制文件等 JVM支持哪些语言（Kotlin、Groovy、JRuby、Jython、Scala）
 值传递、引用传递 Java中只有值传递
-public class Main { public static void main(String[] args) { int a = 10; Integer b = 20; int[] arr = {1, 2}; swap(a, b); System.</description>
+public class Main { public static void main(String[] args) { int a = 10; Integer b = 20; int[] arr = {1, 2}; swap(a, b); System.out.println(String.format(&amp;#34;a:%d b:%d&amp;#34;, a, b)); swap(arr); System.out.println(Arrays.toString(arr)); } // 对于对象而言传递的是对象引用的地址作为值 static void swap(int a, Integer b) { int t = a; a = b; b = t; } static void swap(int[] arr) { arr[0] = 996; } } /** OutPut: a:10 b:20 [996, 2] **/ 值传递（pass by value）是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到实际参数。 引用传递（pass by reference）是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。 成员变量和方法作用域 作用域 当前类 同package 子孙类 不同package public √ √ √ √ protected √ √ √ × fridendly(默认) √ √ × × private √ × × × 例子：protected在其子类中可以访问，无论是子类内部还是子类的实例，无论它们是在哪个包中, 但如果子类与父类不在同一个包中，在子类中用父类的实例去访问的话不可以。</description>
     </item>
-    
     <item>
       <title>设计模式复习</title>
       <link>https://razielez.github.io/posts/%E9%9D%A2%E8%AF%95-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Mon, 01 Apr 2019 18:16:21 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/%E9%9D%A2%E8%AF%95-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0/</guid>
       <description>设计模式复习 23种设计模式主要分为三类：创建型模式、结构型模式、行为型模式。
-创建型模式 单例模式  实现单例模式的思路是：一个类能返回对象一个引用(永远是同一个)和一个获得该实例的方法（必须是静态方法，通常使用getInstance这个名称）；当我们调用这个方法时，如果类持有的引用不为空就返回这个引用，如果类保持的引用为空就创建该类的实例并将实例的引用赋予该类保持的引用；同时我们还将该类的构造函数定义为私有方法，这样其他处的代码就无法通过调用该类的构造函数来实例化该类的对象，只有通过该类提供的静态方法来得到该类的唯一实例。
- 代码实现  饿汉式 线程安全  class Singleton { private static Singleton instance = new Singleton(); private Singleton() {} public static Singleton getInstance() { return instance; } } 懒汉式 双向检查锁定  class Singleton { // volatile 多线程安全, 但屏蔽Java虚拟机优化, 效率降低  private volatile static Singleton instance = null; private Singleton() {} public static Singleton getInstance() { if (instance == null) { // 锁定代码块  synchronized (Singleton.</description>
+创建型模式 单例模式 实现单例模式的思路是：一个类能返回对象一个引用(永远是同一个)和一个获得该实例的方法（必须是静态方法，通常使用getInstance这个名称）；当我们调用这个方法时，如果类持有的引用不为空就返回这个引用，如果类保持的引用为空就创建该类的实例并将实例的引用赋予该类保持的引用；同时我们还将该类的构造函数定义为私有方法，这样其他处的代码就无法通过调用该类的构造函数来实例化该类的对象，只有通过该类提供的静态方法来得到该类的唯一实例。
+代码实现 饿汉式 线程安全 class Singleton { private static Singleton instance = new Singleton(); private Singleton() {} public static Singleton getInstance() { return instance; } } 懒汉式 双向检查锁定 class Singleton { // volatile 多线程安全, 但屏蔽Java虚拟机优化, 效率降低 private volatile static Singleton instance = null; private Singleton() {} public static Singleton getInstance() { if (instance == null) { // 锁定代码块 synchronized (Singleton.class) { if (instance == null) { instance = new Singleton(); } } } return instance; } } 使用静态内部类实现 // IoDH 初始化不会失败使用, 延迟加载 public class Singleton { private static class SingletonHolder { private static final Singleton instance = new Singleton(); } public static Singleton getInstance(){ return SingletonHolder.</description>
     </item>
-    
     <item>
       <title>位运算笔记</title>
       <link>https://razielez.github.io/posts/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 01 Aug 2018 18:16:21 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%94%E8%AE%B0/</guid>
-      <description>位运算 &amp;amp; 、|、 ^ a &amp;amp; a = a a | a = a a ^ a = 0 a &amp;amp; 0 = 0 a | 0 = a a ^ 0 = a a | ( a &amp;amp; b ) = a a &amp;amp; ( a | b ) = a a、b值交换 a ^= b; b ^= a; a ^= b; 判断奇偶（取最后一位） a &amp;amp; 1 &amp;lt;==&amp;gt; a % 2 i+1位置为1 // 1110 =&amp;gt; 1111 a |= 1 &amp;lt;&amp;lt; i i+1位置为0 // 1111 =&amp;gt; 1101a &amp;amp;= ~(1 &amp;lt;&amp;lt; i)取出i+1位 // i = 2, 7 =&amp;gt; 4 a = a &amp;amp; (1 &amp;lt;&amp;lt; i) 删除最后的1 // 1100 =&amp;gt; 1000 a = a &amp;amp; (a-1) 在对应i+1位，插入b的对应位 a |= 1 &amp;lt;&amp;lt; i; （a的bit位置1）a &amp;amp; (b &amp;amp; 1&amp;lt;&amp;lt;i) （与b的bit位相与）得到最高位的1 a = a |(a&amp;gt;&amp;gt;1); a = a |(a&amp;gt;&amp;gt;2); a = a |(a&amp;gt;&amp;gt;4); a = a |(a&amp;gt;&amp;gt;8); a = a |(a&amp;gt;&amp;gt;16); return (a+1)&amp;gt;&amp;gt;1; 检测一个无符号整数是否是2^n -1的形式 x&amp;amp;(x+1) 移位 在Java中正数&amp;gt;&amp;gt;等价于&amp;gt;&amp;gt;&amp;gt;，负数在内存中已补码形式保存，&amp;gt;&amp;gt;&amp;gt;表示无符号右移。</description>
+      <description>位运算 &amp;amp; 、|、 ^ a &amp;amp; a = a a | a = a a ^ a = 0 a &amp;amp; 0 = 0 a | 0 = a a ^ 0 = a a | ( a &amp;amp; b ) = a a &amp;amp; ( a | b ) = a a、b值交换 a ^= b; b ^= a; a ^= b; 判断奇偶（取最后一位） a &amp;amp; 1 &amp;lt;==&amp;gt; a % 2 i+1位置为1 // 1110 =&amp;gt; 1111 a |= 1 &amp;lt;&amp;lt; i i+1位置为0 // 1111 =&amp;gt; 1101a &amp;amp;= ~(1 &amp;lt;&amp;lt; i) 取出i+1位 // i = 2, 7 =&amp;gt; 4 a = a &amp;amp; (1 &amp;lt;&amp;lt; i) 删除最后的1 // 1100 =&amp;gt; 1000 a = a &amp;amp; (a-1) 在对应i+1位，插入b的对应位 a |= 1 &amp;lt;&amp;lt; i; （a的bit位置1）a &amp;amp; (b &amp;amp; 1&amp;lt;&amp;lt;i) （与b的bit位相与） 得到最高位的1 a = a |(a&amp;gt;&amp;gt;1); a = a |(a&amp;gt;&amp;gt;2); a = a |(a&amp;gt;&amp;gt;4); a = a |(a&amp;gt;&amp;gt;8); a = a |(a&amp;gt;&amp;gt;16); return (a+1)&amp;gt;&amp;gt;1; 检测一个无符号整数是否是2^n -1的形式 x&amp;amp;(x+1) 移位 在Java中正数&amp;gt;&amp;gt;等价于&amp;gt;&amp;gt;&amp;gt;，负数在内存中已补码形式保存，&amp;gt;&amp;gt;&amp;gt;表示无符号右移。</description>
     </item>
-    
     <item>
       <title>数据库事务</title>
       <link>https://razielez.github.io/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/</guid>
-      <description>事务  数据库管理系统执行过程中的一个逻辑单位，由一个有限的数据库操作序列构成。
- 特性 事务应该具有4个属性：原子性、一致性、隔离性、持久性。
+      <description>事务 数据库管理系统执行过程中的一个逻辑单位，由一个有限的数据库操作序列构成。
+特性 事务应该具有4个属性：原子性、一致性、隔离性、持久性。
 原子性（Atomicity）：数据库事务是一个不可分割的单位。只有事务中所有的数据库操作成功，才算整个事务才算成功。只读操作，保证一致性很简单，一旦出现错误，要么重试，要么返回错误代码。
 一致性（Consistency）：事务将数据库从一种状态转变为下一种一致的状态。事务开始之前和结束之后，数据库的完整性约束没有被破坏。例如，数据操作失败，表中姓名字段在唯一的情况下，撤销之后导致重复，从而破坏了事务的一致性。
 隔离性（Isolation）：别的称呼，并发控制（concurrency control）、可串行化（serialzability）、锁（locking）等。事务隔离性要求每个读写事务对其他事务的操作对象能实现相互分离，即事务提交之前对其他事务不可见，通常使用锁实现。
 持久性（Durability）：事务一旦提交结果是永久性的，发生宕机等事故，数据库也能将数据恢复。持久性事务保证的是高可靠性，而不是高可用性，事务本身不能完成，需要系统共同配合来实现。
 分类 扁平事务、带有保存点的扁平事务、链事务、嵌套事务、分布式事务。
-隔离级别  未提交读(Read Uncommitted)：允许脏读，也就是可能读取到其他会话中未提交事务修改的数据 提交读(Read Committed)：只能读取到已经提交的数据。Oracle等多数数据库默认都是该级别 (不重复读) 可重复读(Repeated Read)：可重复读。在同一个事务内的查询都是事务开始时刻一致的，InnoDB默认级别。在SQL标准中，该隔离级别消除了不可重复读，但是还存在幻象读 串行读(Serializable)：完全串行化的读，每次读都需要获得表级共享锁，读写相互都会阻塞     隔离级别 脏读 丢失更新 不可重复读 幻读 并发模型 更新冲突检测     未提交读：Read Uncommited √ √ √ √ 悲观 ×   已提交读：Read commited × × √ √ 悲观 ×   可重复读：Repeatable Read × × × √ 悲观 ×   可串行读：Serializable × × × × 悲观 ×    接下来详细解释，假设有下面两个事务同时执行：</description>
+隔离级别 未提交读(Read Uncommitted)：允许脏读，也就是可能读取到其他会话中未提交事务修改的数据 提交读(Read Committed)：只能读取到已经提交的数据。Oracle等多数数据库默认都是该级别 (不重复读) 可重复读(Repeated Read)：可重复读。在同一个事务内的查询都是事务开始时刻一致的，InnoDB默认级别。在SQL标准中，该隔离级别消除了不可重复读，但是还存在幻象读 串行读(Serializable)：完全串行化的读，每次读都需要获得表级共享锁，读写相互都会阻塞 隔离级别 脏读 丢失更新 不可重复读 幻读 并发模型 更新冲突检测 未提交读：Read Uncommited √ √ √ √ 悲观 × 已提交读：Read commited × × √ √ 悲观 × 可重复读：Repeatable Read × × × √ 悲观 × 可串行读：Serializable × × × × 悲观 × 接下来详细解释，假设有下面两个事务同时执行：
+begin; -- 事务1 insert into table1 (somevaue); -- 随意写的伪sql update table2 set aa = aa + 1 where id = 1; commit; begin; -- 事务2 select count(*) from table1; -- 第一次读count select aa from table2 where id = 1; -- 第一次读aa -- 假设在这个点 事务1成功提交 select count(*) from table1; -- 第二次读count select aa from table2 where id = 1; -- 第二次读aa commit; 串行化不用解释了，依次执行，不会产生冲突。</description>
     </item>
-    
   </channel>
 </rss>

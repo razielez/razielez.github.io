@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>linux on Razielez&#39;s Blog</title>
+    <title>Linux on Razielez&#39;s Blog</title>
     <link>https://razielez.github.io/tags/linux/</link>
-    <description>Recent content in linux on Razielez&#39;s Blog</description>
+    <description>Recent content in Linux on Razielez&#39;s Blog</description>
     <image>
+      <title>Razielez&#39;s Blog</title>
       <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 28 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sat, 28 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://razielez.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>20行代码的签到脚本(Python)</title>
       <link>https://razielez.github.io/posts/20%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/</link>
       <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/20%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E7%AD%BE%E5%88%B0%E8%84%9A%E6%9C%AC/</guid>
       <description>懒得每天在某个网站签到，写了一个python脚本扔在云主机上。网站很简单，代码就几十行。
 签到脚本 import requests username = &amp;#34;####&amp;#34; password = &amp;#34;####&amp;#34; loginUrl = &amp;#34;登录路径/auth/login&amp;#34; s = requests.Session() logindata = { &amp;#39;email&amp;#39;:username, &amp;#39;passwd&amp;#39;:password, &amp;#39;remember_me&amp;#39;:&amp;#39;ture&amp;#39;, } r = s.post(loginUrl,data=logindata) r = s.get(loginUrl) checkinUrl=&amp;#34;签到的路径/user/checkin&amp;#34; rr = s.post(checkinUrl)#执行签到 rr = s.get(loginUrl) # print(rr) # print(rr._content.decode()) exit() 在Linux上定时执行这个脚本 crontab -e 进入编辑模式，设置每天8:00运行一次。 crontab的语法规范 分钟 小时 日期 月份 周 命令
-00 8 * * * python /opt/checkin.py</description>
+00 8 * * * python /opt/checkin.py </description>
     </item>
-    
   </channel>
 </rss>

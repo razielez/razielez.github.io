@@ -1,57 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>java on Razielez&#39;s Blog</title>
+    <title>Java on Razielez&#39;s Blog</title>
     <link>https://razielez.github.io/tags/java/</link>
-    <description>Recent content in java on Razielez&#39;s Blog</description>
+    <description>Recent content in Java on Razielez&#39;s Blog</description>
     <image>
+      <title>Razielez&#39;s Blog</title>
       <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 03 Oct 2021 12:49:26 +0800</lastBuildDate><atom:link href="https://razielez.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 03 Oct 2021 12:49:26 +0800</lastBuildDate>
+    <atom:link href="https://razielez.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jdk编译记录</title>
       <link>https://razielez.github.io/posts/jdk%E7%BC%96%E8%AF%91%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Sun, 03 Oct 2021 12:49:26 +0800</pubDate>
-      
       <guid>https://razielez.github.io/posts/jdk%E7%BC%96%E8%AF%91%E8%AE%B0%E5%BD%95/</guid>
-      <description>编译环境  操作系统： macOS Big Sur 11.4 20F71 x86_64 CPU架构： x86 BootStrap: zulu17.28.13-ca-jdk17.0.0-macosx_x64  编译版本： https://github.com/openjdk/jdk
+      <description>编译环境 操作系统： macOS Big Sur 11.4 20F71 x86_64 CPU架构： x86 BootStrap: zulu17.28.13-ca-jdk17.0.0-macosx_x64 编译版本： https://github.com/openjdk/jdk
 下载jdk源码 git clone https://git.openjdk.java.net/jdk/
 根据发布版本记录切换到 jdk17-ga版本
 git checkout jdk-17-ga 运行配置 构建之前彻底清空上一次编译结果
 make dist-clean 配置 BootStrap JDK。编译jdk17需要jdk17，下载已经编译好的jdk作为BootStrap JDK 同一个终端下配置JAVA_HOME
 export JAVA_HOME=${jdk17 home} 最后执行bash configure， 处理WARN等日志
 成功结果
-Configuration summary: * Name: macosx-x86_64-server-release * Debug level: release * HS debug level: product * JVM variants: server * JVM features: server: &#39;cds compiler1 compiler2 dtrace epsilongc g1gc jfr jni-check jvmci jvmti management nmt parallelgc serialgc services shenandoahgc vm-structs zgc&#39; * OpenJDK target: OS: macosx, CPU architecture: x86, address length: 64 * Version string: 17-internal+0-adhoc.</description>
+Configuration summary: * Name: macosx-x86_64-server-release * Debug level: release * HS debug level: product * JVM variants: server * JVM features: server: &amp;#39;cds compiler1 compiler2 dtrace epsilongc g1gc jfr jni-check jvmci jvmti management nmt parallelgc serialgc services shenandoahgc vm-structs zgc&amp;#39; * OpenJDK target: OS: macosx, CPU architecture: x86, address length: 64 * Version string: 17-internal+0-adhoc.</description>
     </item>
-    
     <item>
       <title>对IDEA调优</title>
       <link>https://razielez.github.io/posts/%E4%B8%80%E6%AC%A1%E5%AF%B9idea%E7%9A%84%E8%B0%83%E4%BC%98/</link>
       <pubDate>Fri, 25 Oct 2019 18:16:21 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/%E4%B8%80%E6%AC%A1%E5%AF%B9idea%E7%9A%84%E8%B0%83%E4%BC%98/</guid>
-      <description>工具  jps jstat -gcutil 9448 1000 jconsole.exe  IDEA调优后的参数 -server -Xms3g -Xmx3g -XX:NewRatio=5 -Xss16m -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:ConcGCThreads=4 -XX:ReservedCodeCacheSize=512m -XX:+TieredCompilation -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false-Djava.net.preferIPv4Stack=true-XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow 相关参数介绍 # custom IntelliJ IDEA VM options ##################JVM模式############################ # IDEA的JVM以Server模式启动（新生代默认使用ParNew） -server ##################内存分配############################ # 堆初始值占用3G，意味着IDEA启动即分配3G内存 -Xms3g # 堆最大值占用3G -Xmx3g # 强制JVM在启动时申请到足够的堆内存（否则IDEA启动时堆初始大小不足3g） -XX:+AlwaysPreTouch # 年轻代与老年代比例为1:3（默认值是1:4），降低年轻代的回收频率 -XX:NewRatio=3 # 栈帧大小为16m -Xss16m ##################老年代回收器############################ # 使用CMS老年代回收器 -XX:+UseConcMarkSweepGC # CMS的重新标记步骤：多线程一起执行 -XX:+CMSParallelRemarkEnabled # CMS的并发标记步骤：启用4个线程并发标记（理论上越多越好，前提是CPU核心足够多） -XX:ConcGCThreads=4 ##################JIT编译器############################ # 代码缓存，用于存放Just In Time编译后的本地代码，如果塞满，JVM将只解释执行，不再编译native代码。 -XX:ReservedCodeCacheSize=512m # 分层编译，JIT编译优化越来越好，IDEA运行时间越久越快 -XX:+TieredCompilation # 节省64位指针占用的空间，代价是JVM额外开销 -XX:+UseCompressedOops # 增大软引用在JVM中的存活时长（堆空闲空间越大越久） -XX:SoftRefLRUPolicyMSPerMB=50 -Dsun.</description>
+      <description>工具 jps jstat -gcutil 9448 1000 jconsole.exe IDEA调优后的参数 -server -Xms3g -Xmx3g -XX:NewRatio=5 -Xss16m -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:ConcGCThreads=4 -XX:ReservedCodeCacheSize=512m -XX:+TieredCompilation -XX:SoftRefLRUPolicyMSPerMB=50 -ea -Dsun.io.useCanonCaches=false-Djava.net.preferIPv4Stack=true-XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow 相关参数介绍 # custom IntelliJ IDEA VM options ##################JVM模式############################ # IDEA的JVM以Server模式启动（新生代默认使用ParNew） -server ##################内存分配############################ # 堆初始值占用3G，意味着IDEA启动即分配3G内存 -Xms3g # 堆最大值占用3G -Xmx3g # 强制JVM在启动时申请到足够的堆内存（否则IDEA启动时堆初始大小不足3g） -XX:+AlwaysPreTouch # 年轻代与老年代比例为1:3（默认值是1:4），降低年轻代的回收频率 -XX:NewRatio=3 # 栈帧大小为16m -Xss16m ##################老年代回收器############################ # 使用CMS老年代回收器 -XX:+UseConcMarkSweepGC # CMS的重新标记步骤：多线程一起执行 -XX:+CMSParallelRemarkEnabled # CMS的并发标记步骤：启用4个线程并发标记（理论上越多越好，前提是CPU核心足够多） -XX:ConcGCThreads=4 ##################JIT编译器############################ # 代码缓存，用于存放Just In Time编译后的本地代码，如果塞满，JVM将只解释执行，不再编译native代码。 -XX:ReservedCodeCacheSize=512m # 分层编译，JIT编译优化越来越好，IDEA运行时间越久越快 -XX:+TieredCompilation # 节省64位指针占用的空间，代价是JVM额外开销 -XX:+UseCompressedOops # 增大软引用在JVM中的存活时长（堆空闲空间越大越久） -XX:SoftRefLRUPolicyMSPerMB=50 -Dsun.</description>
     </item>
-    
     <item>
       <title>Java线程检测死锁</title>
       <link>https://razielez.github.io/posts/java%E7%BA%BF%E7%A8%8B%E6%A3%80%E6%B5%8B%E6%AD%BB%E9%94%81/</link>
       <pubDate>Sat, 10 Aug 2019 10:39:53 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/java%E7%BA%BF%E7%A8%8B%E6%A3%80%E6%B5%8B%E6%AD%BB%E9%94%81/</guid>
       <description>死锁是指两个或两个以上的进程在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，若无外力作用，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的进程称为死锁进程。
 Java线程中我们构造两个相互等待对方释放资源的线程就构成了死锁。
 代码：
 public class DeadLockSimulation { private static String A = &amp;#34;a&amp;#34;; private static String B = &amp;#34;b&amp;#34;; public static void main(String[] args) { new DeadLockSimulation().deadLock(); } private void deadLock() { Thread t1 = new Thread(new Runnable() { @Override public void run() { synchronized (A) { try { Thread.sleep(1000); } catch (InterruptedException e) { e.printStackTrace(); } synchronized (B) { System.out.println(&amp;#34;t1&amp;#34;); } } } }); Thread t2 = new Thread(new Runnable() { @Override public void run() { synchronized (B) { synchronized (A) { System.</description>
     </item>
-    
     <item>
       <title>Java两个线程之间共享数据</title>
       <link>https://razielez.github.io/posts/java%E4%B8%A4%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/java%E4%B8%A4%E4%B8%AA%E7%BA%BF%E7%A8%8B%E4%B9%8B%E9%97%B4%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE/</guid>
       <description>Java里面进行多线程通信的主要方式就是共享内存的方式，共享内存主要的关注点有两个：可见性和有序性原子性。
 Java 内存模型（JMM）解决了可见性和有序性的问题，而锁解决了原子性的问题，理想情况下我们希望做到“同步”和“互斥”。
@@ -59,12 +55,10 @@ Java 内存模型（JMM）解决了可见性和有序性的问题，而锁解决
 一、数据抽象成一个类，对数据操作的方法封装在类里
 public class MyData1 { private int j = 0; public static void main(String[] args) { MyData1 data = new MyData1(); AddRunnable addRunnable = new AddRunnable(data); DecRunnable decRunnable = new DecRunnable(data); new Thread(addRunnable).start(); new Thread(decRunnable).start(); } public synchronized void add() { j++; System.out.println(&amp;#34;线程：&amp;#34; + Thread.currentThread().getName() + &amp;#34; j为：&amp;#34; + j); } public synchronized void dec() { j--; System.out.println(&amp;#34;线程：&amp;#34; + Thread.currentThread().getName() + &amp;#34; j为：&amp;#34; + j); } public int getData() { return j; } } class AddRunnable implements Runnable { MyData1 data1 = new MyData1(); public AddRunnable(MyData1 data1) { this.</description>
     </item>
-    
     <item>
       <title>Java基础复习（一）</title>
       <link>https://razielez.github.io/posts/java%E5%A4%8D%E4%B9%A0%E4%B8%80/</link>
       <pubDate>Wed, 01 May 2019 10:39:53 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/java%E5%A4%8D%E4%B9%A0%E4%B8%80/</guid>
       <description>Java基础 面向对象六原则一法则 单一职责原则（Single-Resposibility Principle） 一个类只做它该做的事情。（单一职责原则想表达的就是&amp;quot;高内聚&amp;quot;，写代码最终极的原则只有六个字&amp;quot;高内聚、低耦合&amp;quot;，所谓的高内聚就是一个代码模块只完成一项功能，在面向对象中，如果只让一个类完成它该做的事，而不涉及与它无关的领域就是践行了高内聚的原则，这个类就只有单一职责。另一个是模块化一个好的软件系统，它里面的每个功能模块也应该是可以轻易的拿到其他系统中使用的，这样才能实现软件复用的目标。）。
 开放封闭原则（Open-Closed principle） 软件实体应当对扩展开放，对修改关闭。（在理想的状态下，当我们需要为一个软件系统增加新功能时，只需要从原来的系统派生出一些新类就可以，不需要修改原来的任何一行代码。要做到开闭有两个要点：1. 抽象是关键，一个系统中如果没有抽象类或接口系统就没有扩展点；2. 封装可变性，将系统中的各种可变因素封装到一个继承结构中，如果多个可变因素混杂在一起，系统将变得复杂而换乱，如果不清楚如何封装可变性）
@@ -73,66 +67,55 @@ Liskov替换原则（Liskov-Substituion Principle） 里氏替换原则，任何
 接口隔离原则（Interface-Segregation Principle） 接口要小而专，绝不能大而全。（臃肿的接口是对接口的污染，既然接口表示能力，那么一个接口只应该描述一种能力，接口也应该是高度内聚的。例如，琴棋书画就应该分别设计为四个接口，而不应设计成一个接口中的四个方法，因为如果设计成一个接口中的四个方法，那么这个接口很难用，毕竟琴棋书画四样都精通的人还是少数，而如果设计成四个接口，会几项就实现几个接口，这样的话每个接口被复用的可能性是很高的。Java中的接口代表能力、 分离的手段主要有以下两种：1. 委托分离，通过增加一个新的类型来委托客户的请求，隔离客户和接口的直接依赖，但是会增加系统的开销。2. 多重继承分离，通过接口多继承来实现客户的需求，这种方式是较好的。
 合成聚合复用原则 优先使用聚合或合成关系复用代码。（通过继承来复用代码是面向对象程序设计中被滥用得最多的东西，因为所有的教科书都无一例外的对继承进行了鼓吹从而误导了初学者，类与类之间简单的说有三种关系，Is-A关系、Has-A关系、Use-A关系，分别代表继承、关联和依赖。其中，关联关系根据其关联的强度又可以进一步划分为关联、聚合和合成，但说白了都是Has-A关系，合成聚合复用原则想表达的是优先考虑Has-A关系而不是Is-A关系复用代码，原因嘛可以自己从百度上找到一万个理由，需要说明的是，即使在Java的API中也有不少滥用继承的例子，例如Properties类继承了Hashtable类，Stack类继承了Vector类，这些继承明显就是错误的，更好的做法是在Properties类中放置一个Hashtable类型的成员并且将其键和值都设置为字符串来存储数据，而Stack类的设计也应该是在Stack类中放一个Vector对象来存储数据。记住：任何时候都不要继承工具类，工具是可以拥有并可以使用的，而不是拿来继承的。）
 迪米特法则 迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解。再复杂的系统都可以为用户提供一个简单的门面，Java Web开发中作为前端控制器的Servlet或Filter不就是一个门面吗，浏览器对服务器的运作方式一无所知，但是通过前端控制器就能够根据你的请求得到相应的服务。调停者模式也可以举一个简单的例子来说明，例如一台计算机，CPU、内存、硬盘、显卡、声卡各种设备需要相互配合才能很好的工作，但是如果这些东西都直接连接到一起，计算机的布线将异常复杂，在这种情况下，主板作为一个调停者的身份出现，它将各个设备连接在一起而不需要每个设备之间直接交换数据，这样就减小了系统的耦合度和复杂度。
-Java如何实现的平台无关  Java语言规范  通过规定Java语言中基本数据类型的取值范围和行为   Class文件  所有Java文件要编译成统一的Class文件   Java虚拟机  通过Java虚拟机将Class文件转成对应平台的二进制文件等    JVM支持哪些语言（Kotlin、Groovy、JRuby、Jython、Scala）
+Java如何实现的平台无关 Java语言规范 通过规定Java语言中基本数据类型的取值范围和行为 Class文件 所有Java文件要编译成统一的Class文件 Java虚拟机 通过Java虚拟机将Class文件转成对应平台的二进制文件等 JVM支持哪些语言（Kotlin、Groovy、JRuby、Jython、Scala）
 值传递、引用传递 Java中只有值传递
-public class Main { public static void main(String[] args) { int a = 10; Integer b = 20; int[] arr = {1, 2}; swap(a, b); System.</description>
+public class Main { public static void main(String[] args) { int a = 10; Integer b = 20; int[] arr = {1, 2}; swap(a, b); System.out.println(String.format(&amp;#34;a:%d b:%d&amp;#34;, a, b)); swap(arr); System.out.println(Arrays.toString(arr)); } // 对于对象而言传递的是对象引用的地址作为值 static void swap(int a, Integer b) { int t = a; a = b; b = t; } static void swap(int[] arr) { arr[0] = 996; } } /** OutPut: a:10 b:20 [996, 2] **/ 值传递（pass by value）是指在调用函数时将实际参数复制一份传递到函数中，这样在函数中如果对参数进行修改，将不会影响到实际参数。 引用传递（pass by reference）是指在调用函数时将实际参数的地址直接传递到函数中，那么在函数中对参数所进行的修改，将影响到实际参数。 成员变量和方法作用域 作用域 当前类 同package 子孙类 不同package public √ √ √ √ protected √ √ √ × fridendly(默认) √ √ × × private √ × × × 例子：protected在其子类中可以访问，无论是子类内部还是子类的实例，无论它们是在哪个包中, 但如果子类与父类不在同一个包中，在子类中用父类的实例去访问的话不可以。</description>
     </item>
-    
     <item>
       <title>常见排序算法实现</title>
       <link>https://razielez.github.io/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95java%E5%AE%9E%E7%8E%B0/</link>
       <pubDate>Wed, 20 Feb 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95java%E5%AE%9E%E7%8E%B0/</guid>
-      <description>排序比较 快速排序 /** * 快速排序算法 */ public static void quickSort(int[] list, int left, int right) { if (left &amp;lt; right) { // 分割数组，找到分割点  int point = partition(list, left, right); // 递归调用，对左子数组进行快速排序  quickSort(list, left, point - 1); // 递归调用，对右子数组进行快速排序  quickSort(list, point + 1, right); } } /** * 分割数组，找到分割点 */ public static int partition(int[] list, int left, int right) { // 用数组的第一个元素作为基准数  int first = list[left]; while (left &amp;lt; right) { while (left &amp;lt; right &amp;amp;&amp;amp; list[right] &amp;gt;= first) { right--; } // 交换  swap(list, left, right); while (left &amp;lt; right &amp;amp;&amp;amp; list[left] &amp;lt;= first) { left++; } // 交换  swap(list, left, right); } // 返回分割点所在的位置  return left; } /** * 交换数组中两个位置的元素 */ public static void swap(int[] list, int left, int right) { int temp; if (list !</description>
+      <description>排序比较 快速排序 /** * 快速排序算法 */ public static void quickSort(int[] list, int left, int right) { if (left &amp;lt; right) { // 分割数组，找到分割点 int point = partition(list, left, right); // 递归调用，对左子数组进行快速排序 quickSort(list, left, point - 1); // 递归调用，对右子数组进行快速排序 quickSort(list, point + 1, right); } } /** * 分割数组，找到分割点 */ public static int partition(int[] list, int left, int right) { // 用数组的第一个元素作为基准数 int first = list[left]; while (left &amp;lt; right) { while (left &amp;lt; right &amp;amp;&amp;amp; list[right] &amp;gt;= first) { right--; } // 交换 swap(list, left, right); while (left &amp;lt; right &amp;amp;&amp;amp; list[left] &amp;lt;= first) { left++; } // 交换 swap(list, left, right); } // 返回分割点所在的位置 return left; } /** * 交换数组中两个位置的元素 */ public static void swap(int[] list, int left, int right) { int temp; if (list !</description>
     </item>
-    
     <item>
       <title>Manacher算法-最长回文串</title>
       <link>https://razielez.github.io/posts/manacher-%E5%9B%9E%E6%96%87%E4%B8%B2/</link>
       <pubDate>Thu, 15 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/manacher-%E5%9B%9E%E6%96%87%E4%B8%B2/</guid>
       <description>题目 求解字符串最长回文串。
 leetcode: 最长回文子串
-样例 Input 1211daccbbabbOutput 1211accbbabbManacher算法，时间复杂度O(n), 空间复杂度O(1)。
+样例 Input 1211daccbbabb Output 1211accbbabb Manacher算法，时间复杂度O(n), 空间复杂度O(1)。
 步骤 先对s串处理转换为奇数长度的串。
-s = &amp;quot;12212321&amp;quot;==&amp;gt;S # 1 # 2 # 2 # 1 # 2 # 3 # 2 # 1 #P 1 2 1 2 5 2 1 4 1 2 1 6 1 2 1 2 1p[i]表示记录以字符S[i]为中心的最长回文子串向左或向右扩张的长度（包括S[i]）。 即以i为原点的最大回文半径。
+s = &amp;#34;12212321&amp;#34;==&amp;gt;S # 1 # 2 # 2 # 1 # 2 # 3 # 2 # 1 #P 1 2 1 2 5 2 1 4 1 2 1 6 1 2 1 2 1 p[i]表示记录以字符S[i]为中心的最长回文子串向左或向右扩张的长度（包括S[i]）。 即以i为原点的最大回文半径。
 Manacher算法增加两个辅助变量id和mx。
 id代表当前“已经匹配完毕的结尾最远的回文串”中心为s的第ID位。
 mx = p[i] + id代表当前“已经匹配完毕的结尾最远的回文串”到达了s的第Mx位。
 最长回文子串长度 = p[i] - 1 = 5。</description>
     </item>
-    
     <item>
       <title>Java8 Stream</title>
       <link>https://razielez.github.io/posts/java8-stream/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/java8-stream/</guid>
-      <description>代码示例： public class Java8Stream { public static void main(String args[]) { System.out.println(&amp;#34;使用 Java 7: &amp;#34;); // 计算空字符串  List&amp;lt;String&amp;gt; strings = Arrays.asList(&amp;#34;abc&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;bc&amp;#34;, &amp;#34;efg&amp;#34;, &amp;#34;abcd&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;jkl&amp;#34;); System.out.println(&amp;#34;列表: &amp;#34; + strings); long count = getCountEmptyStringUsingJava7(strings); System.out.println(&amp;#34;空字符数量为: &amp;#34; + count); count = getCountLength3UsingJava7(strings); System.out.println(&amp;#34;字符串长度为 3 的数量为: &amp;#34; + count); // 删除空字符串  List&amp;lt;String&amp;gt; filtered = deleteEmptyStringsUsingJava7(strings); System.out.println(&amp;#34;筛选后的列表: &amp;#34; + filtered); // 删除空字符串，并使用逗号把它们合并起来  String mergedString = getMergedStringUsingJava7(strings, &amp;#34;, &amp;#34;); System.out.println(&amp;#34;合并字符串: &amp;#34; + mergedString); List&amp;lt;Integer&amp;gt; numbers = Arrays.</description>
+      <description>代码示例： public class Java8Stream { public static void main(String args[]) { System.out.println(&amp;#34;使用 Java 7: &amp;#34;); // 计算空字符串 List&amp;lt;String&amp;gt; strings = Arrays.asList(&amp;#34;abc&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;bc&amp;#34;, &amp;#34;efg&amp;#34;, &amp;#34;abcd&amp;#34;, &amp;#34;&amp;#34;, &amp;#34;jkl&amp;#34;); System.out.println(&amp;#34;列表: &amp;#34; + strings); long count = getCountEmptyStringUsingJava7(strings); System.out.println(&amp;#34;空字符数量为: &amp;#34; + count); count = getCountLength3UsingJava7(strings); System.out.println(&amp;#34;字符串长度为 3 的数量为: &amp;#34; + count); // 删除空字符串 List&amp;lt;String&amp;gt; filtered = deleteEmptyStringsUsingJava7(strings); System.out.println(&amp;#34;筛选后的列表: &amp;#34; + filtered); // 删除空字符串，并使用逗号把它们合并起来 String mergedString = getMergedStringUsingJava7(strings, &amp;#34;, &amp;#34;); System.out.println(&amp;#34;合并字符串: &amp;#34; + mergedString); List&amp;lt;Integer&amp;gt; numbers = Arrays.</description>
     </item>
-    
     <item>
       <title>Java8 Date AND Time API</title>
       <link>https://razielez.github.io/posts/java8-date-time-api/</link>
       <pubDate>Fri, 05 Oct 2018 18:16:21 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/java8-date-time-api/</guid>
       <description>Java8 引入了新的时间类 使用 LocalDate 和 LocalTime 创建 LocalDate 对象并读取值
 //2013-03-06 LocalDate date = LocalDate.of(2012,03,06); //2012 int year = date.getYear(); //MARCH Month month = date.getMonth(); //TUESDAY DayOfWeek dow = date.getDayOfWeek(); //6 int day = date.getDayOfMonth(); //31 int len = date.lengthOfMonth(); //false boolean leap = date.isLeapYear(); //使用工厂方法获取系统日期 LocalDate today = LocalDate.now(); LocalTime time = LocalTime.now().withNano(0);//去除毫秒 TemporalField 是一个接口, 定义了如何访问 temporal 对象某个字段的值. ChronoField 枚举实现这一接口.
 int year = date.get(ChronoField.YEAR); int month = date.get(ChronoField.MONTH_OF_YEAR); int day = date.</description>
     </item>
-    
     <item>
       <title>JSP 九大内置对象常用方法</title>
       <link>https://razielez.github.io/posts/jsp-%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 01 Oct 2018 18:16:21 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/jsp-%E4%B9%9D%E5%A4%A7%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>1. request 对象常用方法 request 是来自客户端的请求. 客户端的请求信息封装在 request 对象中. 以下 HttpServletRequest 类的实例.
-   方法 ( 类型 + 方法名 ) 描述     String getParameter(String strTextName) 获取表单提交信息   Enumeration getParameterNames() 返回可用参数的枚举   String[] getParameterValues(String name) 返回包含参数 name 的所有的数组   Enumeration getAttributeNames() 返回所有属性名的属性值   Object getAttribute(String name) 返回指定属性的属性值   String getCharacterEncoding() 返回字节编码方式   String getProtocol() 获取用户使用的协议   String getServletPath() 获取用户提交信息的页面   String getMethod() 获取客户提交信息的方式   BufferReader getHeader() 获取 HTTP 头文件的 accept、accept-encoding 和 Host 的值   String getRemoteAddr() 获取客户的 IP 地址   String getRemoteHost() 获取客户机的名称   String getserverName() 获取服务器的名称   int getServerPort() 获取服务器端口号    2.</description>
+方法 ( 类型 + 方法名 ) 描述 String getParameter(String strTextName) 获取表单提交信息 Enumeration getParameterNames() 返回可用参数的枚举 String[] getParameterValues(String name) 返回包含参数 name 的所有的数组 Enumeration getAttributeNames() 返回所有属性名的属性值 Object getAttribute(String name) 返回指定属性的属性值 String getCharacterEncoding() 返回字节编码方式 String getProtocol() 获取用户使用的协议 String getServletPath() 获取用户提交信息的页面 String getMethod() 获取客户提交信息的方式 BufferReader getHeader() 获取 HTTP 头文件的 accept、accept-encoding 和 Host 的值 String getRemoteAddr() 获取客户的 IP 地址 String getRemoteHost() 获取客户机的名称 String getserverName() 获取服务器的名称 int getServerPort() 获取服务器端口号 2.</description>
     </item>
-    
   </channel>
 </rss>

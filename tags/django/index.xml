@@ -5,30 +5,29 @@
     <link>https://razielez.github.io/tags/django/</link>
     <description>Recent content in Django on Razielez&#39;s Blog</description>
     <image>
+      <title>Razielez&#39;s Blog</title>
       <url>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://razielez.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://razielez.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://razielez.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Django重置后台密码</title>
       <link>https://razielez.github.io/posts/django%E9%87%8D%E7%BD%AE%E5%90%8E%E5%8F%B0%E5%AF%86%E7%A0%81/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/django%E9%87%8D%E7%BD%AE%E5%90%8E%E5%8F%B0%E5%AF%86%E7%A0%81/</guid>
       <description>emmm时间长忘记密码了
 执行 $ python manage.py shell 修改 In [1]: from django.contrib.auth.models import User In [2]: user = User.objects.get(username=&amp;#39;Username&amp;#39;) In [3]: user.set_password(&amp;#39;Password&amp;#39;) In [4]: user.save() In [5]: exit() </description>
     </item>
-    
     <item>
       <title>django链接MySQL问题</title>
       <link>https://razielez.github.io/posts/django%E9%93%BE%E6%8E%A5mysql%E9%97%AE%E9%A2%98/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://razielez.github.io/posts/django%E9%93%BE%E6%8E%A5mysql%E9%97%AE%E9%A2%98/</guid>
-      <description>错误 （django.db.utils.OperationalError: (1045, &amp;quot;Access denied for user &#39;root&#39;@&#39;localhost&#39; (using password: NO)&amp;quot;)）环境：  Django2.0 MySQL8.0.11  Mysql 8.0 的部分语法，密码的加密方式发生了改变，在8.0 中的用户密码采用的是cha2 加密方法, 从而密码认证错误。
+      <description>错误 （django.db.utils.OperationalError: (1045, &amp;#34;Access denied for user &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; (using password: NO)&amp;#34;)） 环境： Django2.0 MySQL8.0.11 Mysql 8.0 的部分语法，密码的加密方式发生了改变，在8.0 中的用户密码采用的是cha2 加密方法, 从而密码认证错误。
 解决: $ mysql -u root -p mysql&amp;gt; use mysql; mysql&amp;gt; ALTER USER &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED WITH mysql_native_password BY &amp;#39;password&amp;#39;; </description>
     </item>
-    
   </channel>
 </rss>
